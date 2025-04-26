@@ -27,7 +27,7 @@ export const userLogin = async (username: string) => {
     return user
 }
 
-export const allUser = async (page: number = 1, limit: number = 10) => {
+export const allUsers = async (page: number = 1, limit: number = 10) => {
     const skip = (page - 1) * limit;
     
     const user = await prisma.user.findMany({

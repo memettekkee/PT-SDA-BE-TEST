@@ -1,6 +1,6 @@
 import express from 'express'
 import { 
-    allMerchant,
+    allMerchants,
     createMerchant,
     deleteMerchant,
     isMerchantOwnedByUser,
@@ -16,7 +16,7 @@ export const getAllMerchantsCtrl = async (
     try {
         const page = parseInt(req.query.page as string) || 1;
         const limit = parseInt(req.query.limit as string) || 10;
-        const result = await allMerchant(page, limit)
+        const result = await allMerchants(page, limit)
 
         res.status(201).json({
             error: false,
@@ -150,8 +150,16 @@ export const updateMerchantCtrl = async (
             return
         }
 
-        const userMerchant = await isMerchantOwnedByUser(id, userId as string)
+        const checkMerchant = await merchantById(id)
+        if (!checkMerchant) {
+            res.status(404).json({
+                error: true,
+                message: "Merchant not found !"
+            })
+            return
+        }
 
+        const userMerchant = await isMerchantOwnedByUser(id, userId as string)
         if (!userMerchant) {
             res.status(403).json({
                 error: true,
@@ -193,8 +201,16 @@ export const deleteMerchantCtrl = async (
         const { id } = req.params
         const userId = req.user?.id
 
-        const userMerchant = await isMerchantOwnedByUser(id, userId as string)
+        const checkMerchant = await merchantById(id)
+        if (!checkMerchant) {
+            res.status(404).json({
+                error: true,
+                message: "Merchant not found !"
+            })
+            return
+        }
 
+        const userMerchant = await isMerchantOwnedByUser(id, userId as string)
         if (!userMerchant) {
             res.status(403).json({
                 error: true,
@@ -203,7 +219,7 @@ export const deleteMerchantCtrl = async (
             return
         }
 
-        const data = await deleteMerchant(id)
+        await deleteMerchant(id)
         res.status(201).json({
             error: false,
             message: "Merchant successfully deleted !"

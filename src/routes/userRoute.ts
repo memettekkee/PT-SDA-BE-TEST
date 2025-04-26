@@ -8,14 +8,13 @@ import {
     loginCtrl, 
     registerCtrl,
     updateUserCtrl,
-    
 } from '../controllers/userController';
 
 const router = express.Router();
 
 router.post('/register', upload.none(), registerCtrl)
 router.post('/login', upload.none(), loginCtrl)
-// endpoint forget password kirim phone
+
 
 // PRIVATE ENDPOINT
 router.get('/users', verifyToken, getAllUserCtrl)

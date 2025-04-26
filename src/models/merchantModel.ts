@@ -1,7 +1,7 @@
 import prisma from '../database/connection'
 import type { Merchant, UpdateMerchant } from '../utils/interface'
 
-export const allMerchant = async (page: number = 1, limit: number = 10) => {
+export const allMerchants = async (page: number = 1, limit: number = 10) => {
     const skip = (page - 1) * limit;
     const merchant = await prisma.merchant.findMany({
         skip: skip,

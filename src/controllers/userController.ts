@@ -6,7 +6,7 @@ import {
     existingUser, 
     registerUser, 
     userById,
-    allUser, 
+    allUsers, 
     userLogin,
     updateUser
 } from '../models/userModel'
@@ -148,7 +148,7 @@ export const getAllUserCtrl = async (
         const page = parseInt(req.query.page as string) || 1;
         const limit = parseInt(req.query.limit as string) || 10;
         
-        const result = await allUser(page, limit);
+        const result = await allUsers(page, limit);
         
         res.status(200).json({
             error: false,

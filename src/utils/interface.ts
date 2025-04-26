@@ -40,3 +40,22 @@ export interface UpdateMerchant {
     type?: string,
     status?: string
 }
+
+export interface Product {
+  name: string;        
+  price: number; 
+  categoryId: string;   
+  description?: string;  
+  discount?: number;   
+  weight?: number;       
+  has_variant?: boolean; 
+  merchantId?: string;   
+  avatar?: string;        
+}
+
+export interface VariantProduct {
+    sku: string;        
+    stock: number;     
+    colourId?: string;    
+    sizeId?: string;    
+  }
