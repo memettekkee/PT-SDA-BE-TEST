@@ -12,6 +12,7 @@ Sebagai Back-End Developer
 - Typescript
 - Prisma
 - PostgreSQL (Database)
+- Swagger (API Documentation)
 
 ---
 
@@ -90,7 +91,8 @@ Untuk development, Anda disarankan menggunakan `npm run dev` supaya perubahan ot
 
 ---
 
-Happy coding! ✨
+### API Documentation
+## Jalankan aplikasi, lalu akses /api/docs. contoh = http://localhost:3000/api/docs
 
 ### Rancangan Database
 ![SDA-ECommerce-db-design drawio](https://github.com/user-attachments/assets/5532646b-0a21-411d-b117-ecb0c9c23aa5)
