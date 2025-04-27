@@ -7,6 +7,8 @@ import merchantRoute from './routes/merchantRoute';
 import productRoute from './routes/productRoute';
 import masterDataRoute from './routes/masterDataRoute';
 
+import swaggerDocs from './config/swagger';
+
 dotenv.config();
 
 const app = express();
@@ -19,6 +21,8 @@ app.use('/api', userRoute)
 app.use('/api', merchantRoute)
 app.use('/api', productRoute)
 app.use('/api', masterDataRoute)
+
+swaggerDocs(app, Number(PORT));
 
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
