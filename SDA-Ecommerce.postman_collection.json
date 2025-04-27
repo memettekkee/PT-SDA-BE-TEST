@@ -1,0 +1,4320 @@
+{
+	"info": {
+		"_postman_id": "76d543d1-5950-4d88-8eb6-0218d69e404b",
+		"name": "SDA-Ecommerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29999070"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "lewy",
+									"type": "text"
+								},
+								{
+									"key": "fullname",
+									"value": "Robert Lewy",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "lewy@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "@M1squeen_",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "Man",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "birth",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "address",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "phone",
+									"value": "081257091234",
+									"type": "text"
+								},
+								{
+									"key": "avatar",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "username",
+											"value": "lewy",
+											"type": "text"
+										},
+										{
+											"key": "fullname",
+											"value": "Robert Lewy",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "lewy@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "@M1squeen_",
+											"type": "text"
+										},
+										{
+											"key": "gender",
+											"value": "Man",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "birth",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "address",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "phone",
+											"value": "081257091234",
+											"type": "text"
+										},
+										{
+											"key": "avatar",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "216"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d8-2dgwf7pZiSDUhEOMnVD23o3PZEs\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Apr 2025 02:37:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"message\": \"User created !\",\n    \"user\": {\n        \"username\": \"lewy\",\n        \"fullname\": \"Robert Lewy\",\n        \"email\": \"lewy@gmail.com\",\n        \"password\": \"$2b$10$hk.IGsP.6oI9gWNp4aXjr.BLAPA3kv7tJ9AYBR5dJ4HmSYnjkv0Fu\",\n        \"phone\": \"081257091234\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "raphinha",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "@M1squeen_",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "username",
+											"value": "gavi",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "@M1squeen_",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "615"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"267-SNnEOeEGQciZFDIj6XJqgmh0FXY\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Apr 2025 13:25:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"message\": \"Login success !\",\n    \"user\": {\n        \"id\": \"8bf61627-dbbf-46e0-96ec-72c5f8372db2\",\n        \"username\": \"gavi\",\n        \"fullname\": \"Pablo Gavi\",\n        \"password\": \"$2b$10$WZZ9/7FtUZWmKGghldaX/OOgjjSxk7kcxJM5S3lHekFtDC5grNNAa\",\n        \"email\": \"gavi@gmail.com\",\n        \"gender\": null,\n        \"birth\": null,\n        \"address\": null,\n        \"phone\": null,\n        \"avatar\": null,\n        \"createdAt\": \"2025-04-25T16:31:28.405Z\",\n        \"updatedAt\": \"2025-04-25T16:31:28.405Z\"\n    },\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjhiZjYxNjI3LWRiYmYtNDZlMC05NmVjLTcyYzVmODM3MmRiMiIsImVtYWlsIjoiZ2F2aUBnbWFpbC5jb20iLCJpYXQiOjE3NDU2NzM5NDcsImV4cCI6MTc0NTc2MDM0N30.3DU0Wy6p08KHkhllNSJ8J8iYuO39Jdz-W5qQ0D7KIHA\"\n}"
+						}
+					]
+				},
+				{
+					"name": "allUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TOKEN}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success with pagination",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{TOKEN}}",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/users?page=2&limit=9",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"users"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "2"
+										},
+										{
+											"key": "limit",
+											"value": "9"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "3277"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ccd-E5vpTCtk04ltimAa6SeAPIv/rx4\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Apr 2025 02:34:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"message\": \"Success get all users\",\n    \"users\": [\n        {\n            \"id\": \"18\",\n            \"username\": \"gracez\",\n            \"fullname\": \"Grace Zhang\",\n            \"password\": \"Gr@c3Zh@ng#\",\n            \"email\": \"grace.zhang@gmail.com\",\n            \"gender\": \"Female\",\n            \"birth\": \"1997-02-14T00:00:00.000Z\",\n            \"address\": \"123 Cedar Way, Minneapolis, MN\",\n            \"phone\": \"+1-555-890-4567\",\n            \"avatar\": \"avatar18.jpg\",\n            \"createdAt\": \"2025-04-26T00:03:13.003Z\",\n            \"updatedAt\": \"2025-04-26T00:03:13.003Z\",\n            \"merchants\": []\n        },\n        {\n            \"id\": \"20\",\n            \"username\": \"hannahb\",\n            \"fullname\": \"Hannah Baker\",\n            \"password\": \"H@nn@hB@k3r!\",\n            \"email\": \"hannah.b@gmail.com\",\n            \"gender\": \"Female\",\n            \"birth\": \"1994-06-07T00:00:00.000Z\",\n            \"address\": \"789 Birch Ave, Las Vegas, NV\",\n            \"phone\": \"+1-555-012-6789\",\n            \"avatar\": \"avatar20.jpg\",\n            \"createdAt\": \"2025-04-26T00:03:13.003Z\",\n            \"updatedAt\": \"2025-04-26T00:03:13.003Z\",\n            \"merchants\": []\n        },\n        {\n            \"id\": \"30\",\n            \"username\": \"isabellat\",\n            \"fullname\": \"Isabella Thomas\",\n            \"password\": \"!s@b3ll@Th0m@s\",\n            \"email\": \"isabella.t@gmail.com\",\n            \"gender\": \"Female\",\n            \"birth\": \"1996-09-20T00:00:00.000Z\",\n            \"address\": \"159 Coconut Dr, Honolulu, HI\",\n            \"phone\": \"+1-555-012-6789\",\n            \"avatar\": \"avatar30.jpg\",\n            \"createdAt\": \"2025-04-26T00:03:13.003Z\",\n            \"updatedAt\": \"2025-04-26T00:03:13.003Z\",\n            \"merchants\": []\n        },\n        {\n            \"id\": \"13\",\n            \"username\": \"jamesp\",\n            \"fullname\": \"James Peterson\",\n            \"password\": \"J@m3sP3t3r!\",\n            \"email\": \"james.p@gmail.com\",\n            \"gender\": \"Male\",\n            \"birth\": \"1989-05-19T00:00:00.000Z\",\n            \"address\": \"159 Cypress St, Philadelphia, PA\",\n            \"phone\": \"+1-555-345-9012\",\n            \"avatar\": \"avatar13.jpg\",\n            \"createdAt\": \"2025-04-26T00:03:13.003Z\",\n            \"updatedAt\": \"2025-04-26T00:03:13.003Z\",\n            \"merchants\": []\n        },\n        {\n            \"id\": \"6\",\n            \"username\": \"jennyk\",\n            \"fullname\": \"Jennifer Kim\",\n            \"password\": \"J3nn!K1m\",\n            \"email\": \"jenny.kim@gmail.com\",\n            \"gender\": \"Female\",\n            \"birth\": \"1995-02-18T00:00:00.000Z\",\n            \"address\": \"987 Maple Dr, San Francisco, CA\",\n            \"phone\": \"+1-555-678-9012\",\n            \"avatar\": \"avatar6.jpg\",\n            \"createdAt\": \"2025-04-26T00:03:13.003Z\",\n            \"updatedAt\": \"2025-04-26T00:03:13.003Z\",\n            \"merchants\": []\n        },\n        {\n            \"id\": \"1\",\n            \"username\": \"johndoe123\",\n            \"fullname\": \"John Doe\",\n            \"password\": \"P@ssw0rd123\",\n            \"email\": \"johndoe@gmail.com\",\n            \"gender\": \"Male\",\n            \"birth\": \"1990-05-15T00:00:00.000Z\",\n            \"address\": \"123 Main St, New York, NY\",\n            \"phone\": \"+1-555-123-4567\",\n            \"avatar\": \"avatar1.jpg\",\n            \"createdAt\": \"2025-04-26T00:03:13.003Z\",\n            \"updatedAt\": \"2025-04-26T00:03:13.003Z\",\n            \"merchants\": []\n        },\n        {\n            \"id\": \"23\",\n            \"username\": \"josephg\",\n            \"fullname\": \"Joseph Garcia\",\n            \"password\": \"J0s3phG@rc!@\",\n            \"email\": \"joseph.g@gmail.com\",\n            \"gender\": \"Male\",\n            \"birth\": \"1987-08-09T00:00:00.000Z\",\n            \"address\": \"987 Apple Dr, Kansas City, MO\",\n            \"phone\": \"+1-555-345-9012\",\n            \"avatar\": \"avatar23.jpg\",\n            \"createdAt\": \"2025-04-26T00:03:13.003Z\",\n            \"updatedAt\": \"2025-04-26T00:03:13.003Z\",\n            \"merchants\": []\n        },\n        {\n            \"id\": \"22\",\n            \"username\": \"kellyw\",\n            \"fullname\": \"Kelly Wright\",\n            \"password\": \"K3llyWr!ght#\",\n            \"email\": \"kelly.wright@gmail.com\",\n            \"gender\": \"Female\",\n            \"birth\": \"1992-12-17T00:00:00.000Z\",\n            \"address\": \"654 Cherry St, Pittsburgh, PA\",\n            \"phone\": \"+1-555-234-8901\",\n            \"avatar\": \"avatar22.jpg\",\n            \"createdAt\": \"2025-04-26T00:03:13.003Z\",\n            \"updatedAt\": \"2025-04-26T00:03:13.003Z\",\n            \"merchants\": []\n        },\n        {\n            \"id\": \"28\",\n            \"username\": \"laurend\",\n            \"fullname\": \"Lauren Davis\",\n            \"password\": \"L@ur3nD@v!s#\",\n            \"email\": \"lauren.d@gmail.com\",\n            \"gender\": \"Female\",\n            \"birth\": \"1993-11-12T00:00:00.000Z\",\n            \"address\": \"951 Grape Rd, Tucson, AZ\",\n            \"phone\": \"+1-555-890-4567\",\n            \"avatar\": \"avatar28.jpg\",\n            \"createdAt\": \"2025-04-26T00:03:13.003Z\",\n            \"updatedAt\": \"2025-04-26T00:03:13.003Z\",\n            \"merchants\": []\n        }\n    ],\n    \"pagination\": {\n        \"total\": 32,\n        \"page\": 2,\n        \"limit\": 9,\n        \"totalPages\": 4\n    }\n}"
+						},
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{TOKEN}}",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "3655"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e47-LBUHBet2XUu49K6GcpcS6tbhSnI\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Apr 2025 02:35:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"message\": \"Success get all users\",\n    \"users\": [\n        {\n            \"id\": \"5\",\n            \"username\": \"alexj42\",\n            \"fullname\": \"Alex Johnson\",\n            \"password\": \"Al3xJ0hn!\",\n            \"email\": \"alex.johnson@gmail.com\",\n            \"gender\": \"Male\",\n            \"birth\": \"1988-07-12T00:00:00.000Z\",\n            \"address\": \"654 Birch St, Boston, MA\",\n            \"phone\": \"+1-555-567-8901\",\n            \"avatar\": \"avatar5.jpg\",\n            \"createdAt\": \"2025-04-26T00:03:13.003Z\",\n            \"updatedAt\": \"2025-04-26T00:03:13.003Z\",\n            \"merchants\": []\n        },\n        {\n            \"id\": \"10\",\n            \"username\": \"amyp\",\n            \"fullname\": \"Amy Parker\",\n            \"password\": \"@myP@rk3r2023\",\n            \"email\": \"amy.parker@gmail.com\",\n            \"gender\": \"Female\",\n            \"birth\": \"1994-03-09T00:00:00.000Z\",\n            \"address\": \"753 Aspen Ct, Portland, OR\",\n            \"phone\": \"+1-555-012-3456\",\n            \"avatar\": \"avatar10.jpg\",\n            \"createdAt\": \"2025-04-26T00:03:13.003Z\",\n            \"updatedAt\": \"2025-04-26T00:03:13.003Z\",\n            \"merchants\": []\n        },\n        {\n            \"id\": \"27\",\n            \"username\": \"andrewk\",\n            \"fullname\": \"Andrew Kim\",\n            \"password\": \"@ndr3wK!m2023\",\n            \"email\": \"andrew.k@gmail.com\",\n            \"gender\": \"Male\",\n            \"birth\": \"1986-01-29T00:00:00.000Z\",\n            \"address\": \"753 Orange St, Tampa, FL\",\n            \"phone\": \"+1-555-789-3456\",\n            \"avatar\": \"avatar27.jpg\",\n            \"createdAt\": \"2025-04-26T00:03:13.003Z\",\n            \"updatedAt\": \"2025-04-26T00:03:13.003Z\",\n            \"merchants\": []\n        },\n        {\n            \"id\": \"25\",\n            \"username\": \"brandonl\",\n            \"fullname\": \"Brandon Lee\",\n            \"password\": \"Br@nd0nL33!\",\n            \"email\": \"brandon.l@gmail.com\",\n            \"gender\": \"Male\",\n            \"birth\": \"1984-10-14T00:00:00.000Z\",\n            \"address\": \"135 Peach Ln, Orlando, FL\",\n            \"phone\": \"+1-555-567-1234\",\n            \"avatar\": \"avatar25.jpg\",\n            \"createdAt\": \"2025-04-26T00:03:13.003Z\",\n            \"updatedAt\": \"2025-04-26T00:03:13.003Z\",\n            \"merchants\": []\n        },\n        {\n            \"id\": \"21\",\n            \"username\": \"danielm\",\n            \"fullname\": \"Daniel Miller\",\n            \"password\": \"D@n!3lM!ll3r\",\n            \"email\": \"daniel.m@gmail.com\",\n            \"gender\": \"Male\",\n            \"birth\": \"1985-03-31T00:00:00.000Z\",\n            \"address\": \"321 Walnut Rd, Cleveland, OH\",\n            \"phone\": \"+1-555-123-7890\",\n            \"avatar\": \"avatar21.jpg\",\n            \"createdAt\": \"2025-04-26T00:03:13.003Z\",\n            \"updatedAt\": \"2025-04-26T00:03:13.003Z\",\n            \"merchants\": []\n        },\n        {\n            \"id\": \"9\",\n            \"username\": \"davidc\",\n            \"fullname\": \"David Chen\",\n            \"password\": \"D@v1dCh3n!\",\n            \"email\": \"david.chen@gmail.com\",\n            \"gender\": \"Male\",\n            \"birth\": \"1987-06-22T00:00:00.000Z\",\n            \"address\": \"864 Willow Way, Denver, CO\",\n            \"phone\": \"+1-555-901-2345\",\n            \"avatar\": \"avatar9.jpg\",\n            \"createdAt\": \"2025-04-26T00:03:13.003Z\",\n            \"updatedAt\": \"2025-04-26T00:03:13.003Z\",\n            \"merchants\": []\n        },\n        {\n            \"id\": \"4\",\n            \"username\": \"emilyw\",\n            \"fullname\": \"Emily Wilson\",\n            \"password\": \"Em1lyW$2023\",\n            \"email\": \"emily.wilson@gmail.com\",\n            \"gender\": \"Female\",\n            \"birth\": \"1993-04-27T00:00:00.000Z\",\n            \"address\": \"321 Cedar Ln, Seattle, WA\",\n            \"phone\": \"+1-555-456-7890\",\n            \"avatar\": \"avatar4.jpg\",\n            \"createdAt\": \"2025-04-26T00:03:13.003Z\",\n            \"updatedAt\": \"2025-04-26T00:03:13.003Z\",\n            \"merchants\": []\n        },\n        {\n            \"id\": \"15\",\n            \"username\": \"ethanj\",\n            \"fullname\": \"Ethan Jackson\",\n            \"password\": \"3th@nJ@ck\",\n            \"email\": \"ethan.jackson@gmail.com\",\n            \"gender\": \"Male\",\n            \"birth\": \"1986-04-11T00:00:00.000Z\",\n            \"address\": \"258 Oak St, Charlotte, NC\",\n            \"phone\": \"+1-555-567-1234\",\n            \"avatar\": \"avatar15.jpg\",\n            \"createdAt\": \"2025-04-26T00:03:13.003Z\",\n            \"updatedAt\": \"2025-04-26T00:03:13.003Z\",\n            \"merchants\": []\n        },\n        {\n            \"id\": \"8bf61627-dbbf-46e0-96ec-72c5f8372db2\",\n            \"username\": \"gavi\",\n            \"fullname\": \"Pablo Gavi\",\n            \"password\": \"$2b$10$WZZ9/7FtUZWmKGghldaX/OOgjjSxk7kcxJM5S3lHekFtDC5grNNAa\",\n            \"email\": \"gavi@gmail.com\",\n            \"gender\": null,\n            \"birth\": null,\n            \"address\": null,\n            \"phone\": null,\n            \"avatar\": null,\n            \"createdAt\": \"2025-04-25T16:31:28.405Z\",\n            \"updatedAt\": \"2025-04-25T16:31:28.405Z\",\n            \"merchants\": [\n                {\n                    \"id\": \"d2669438-00f0-4617-bdb6-98959e6a098c\",\n                    \"name\": \"Bukalapak\"\n                }\n            ]\n        },\n        {\n            \"id\": \"18\",\n            \"username\": \"gracez\",\n            \"fullname\": \"Grace Zhang\",\n            \"password\": \"Gr@c3Zh@ng#\",\n            \"email\": \"grace.zhang@gmail.com\",\n            \"gender\": \"Female\",\n            \"birth\": \"1997-02-14T00:00:00.000Z\",\n            \"address\": \"123 Cedar Way, Minneapolis, MN\",\n            \"phone\": \"+1-555-890-4567\",\n            \"avatar\": \"avatar18.jpg\",\n            \"createdAt\": \"2025-04-26T00:03:13.003Z\",\n            \"updatedAt\": \"2025-04-26T00:03:13.003Z\",\n            \"merchants\": []\n        }\n    ],\n    \"pagination\": {\n        \"total\": 32,\n        \"page\": 1,\n        \"limit\": 10,\n        \"totalPages\": 4\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "userById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/user/2e947aa8-21a1-4a9d-8e0a-1aa321f8105c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"2e947aa8-21a1-4a9d-8e0a-1aa321f8105c"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/user/2e947aa8-21a1-4a9d-8e0a-1aa321f8105c",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"user",
+										"2e947aa8-21a1-4a9d-8e0a-1aa321f8105c"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "497"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1f1-venP1Zq0I9b2AEY4wqvQ7F6jfHM\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Apr 2025 02:35:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"message\": \"Successfully get user by id !\",\n    \"user\": {\n        \"id\": \"2e947aa8-21a1-4a9d-8e0a-1aa321f8105c\",\n        \"username\": \"raphinha\",\n        \"fullname\": \"Raphael Dias\",\n        \"password\": \"$2b$10$VkGT0j74rLQpUihSNNuQ9u/GRJl2wsGtL27nstaSnXz23X19s4y8e\",\n        \"email\": \"raphinha11@gmail.com\",\n        \"gender\": \"Man\",\n        \"birth\": null,\n        \"address\": null,\n        \"phone\": \"081257091234\",\n        \"avatar\": null,\n        \"createdAt\": \"2025-04-25T13:46:40.049Z\",\n        \"updatedAt\": \"2025-04-25T15:50:52.385Z\",\n        \"merchants\": [\n            {\n                \"id\": \"ab90dc29-59d5-4bc2-9ea1-f0e1b6e042bd\",\n                \"name\": \"Lazada\"\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "updateuser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "raphinha",
+									"type": "text"
+								},
+								{
+									"key": "fullname",
+									"value": "Raphael Dias",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "raphinha11@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "@M1squeen_",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "gender",
+									"value": "Man",
+									"type": "text"
+								},
+								{
+									"key": "birth",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "address",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "phone",
+									"value": "081257091234",
+									"type": "text"
+								},
+								{
+									"key": "avatar",
+									"type": "file",
+									"src": "/Users/macbookair/Downloads/path.png",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"update"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "username",
+											"value": "raphinha",
+											"type": "text"
+										},
+										{
+											"key": "fullname",
+											"value": "Raphael Dias",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "raphinha11@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "@M1squeen_",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "gender",
+											"value": "Man",
+											"type": "text"
+										},
+										{
+											"key": "birth",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "address",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "phone",
+											"value": "081257091234",
+											"type": "text"
+										},
+										{
+											"key": "avatar",
+											"type": "file",
+											"src": "/Users/macbookair/Downloads/path.png",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/user/update",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"user",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "420"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1a4-mpoRoJQz2rrfij5NQg4m/D3NT80\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Apr 2025 04:13:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"message\": \"User updated !\",\n    \"user\": {\n        \"id\": \"2e947aa8-21a1-4a9d-8e0a-1aa321f8105c\",\n        \"username\": \"raphinha\",\n        \"fullname\": \"Raphael Dias\",\n        \"password\": \"$2b$10$VkGT0j74rLQpUihSNNuQ9u/GRJl2wsGtL27nstaSnXz23X19s4y8e\",\n        \"email\": \"raphinha11@gmail.com\",\n        \"gender\": \"Man\",\n        \"birth\": null,\n        \"address\": null,\n        \"phone\": \"081257091234\",\n        \"avatar\": \"default-user.png\",\n        \"createdAt\": \"2025-04-25T13:46:40.049Z\",\n        \"updatedAt\": \"2025-04-27T04:13:48.209Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "forgotPassword",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "muhammametd@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/forgot-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"forgot-password"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "muhammametd@gmail.com",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/forgot-password",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"forgot-password"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "136"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"88-ouimT688/YNV6cNmBpXS/rthpFU\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Apr 2025 09:33:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"message\": \"Password has been reset\",\n    \"data\": {\n        \"username\": \"Memed\",\n        \"email\": \"muh@gmail.com\",\n        \"newPassword\": \"8f8598d7\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Merchant",
+			"item": [
+				{
+					"name": "createMerchant",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Bukalapaks",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "address",
+									"value": "Samarinda",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "avatar",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "type",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/merchant",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"merchant"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Bukalapak",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "address",
+											"value": "Samarinda",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "avatar",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "type",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/merchant",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"merchant"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "478"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1de-CDVcTdPBgdF9BHtoFbLka1te3Z8\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Apr 2025 13:26:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"message\": \"Successfully create merchant !\",\n    \"merchant\": {\n        \"id\": \"d2669438-00f0-4617-bdb6-98959e6a098c\",\n        \"userId\": \"8bf61627-dbbf-46e0-96ec-72c5f8372db2\",\n        \"name\": \"Bukalapak\",\n        \"email\": \"bukalapak@mail.com\",\n        \"address\": \"Samarinda\",\n        \"phone\": null,\n        \"avatar\": null,\n        \"type\": \"Merchant\",\n        \"status\": \"active\",\n        \"createdAt\": \"2025-04-26T13:26:14.564Z\",\n        \"updatedAt\": \"2025-04-26T13:26:14.564Z\",\n        \"user\": {\n            \"id\": \"8bf61627-dbbf-46e0-96ec-72c5f8372db2\",\n            \"fullname\": \"Pablo Gavi\",\n            \"avatar\": null,\n            \"phone\": null\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "allMerchant",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/merchants",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"merchants"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "allMerchant",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/merchants",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"merchants"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1694"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"69e-oj87PvkcNazf2U/kXFT7s2NGKtg\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Apr 2025 13:26:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"message\": \"Successfully get all merchants !\",\n    \"merchants\": [\n        {\n            \"id\": \"d2669438-00f0-4617-bdb6-98959e6a098c\",\n            \"userId\": \"8bf61627-dbbf-46e0-96ec-72c5f8372db2\",\n            \"name\": \"Bukalapak\",\n            \"email\": \"bukalapak@mail.com\",\n            \"address\": \"Samarinda\",\n            \"phone\": null,\n            \"avatar\": null,\n            \"type\": \"Merchant\",\n            \"status\": \"active\",\n            \"createdAt\": \"2025-04-26T13:26:14.564Z\",\n            \"updatedAt\": \"2025-04-26T13:26:14.564Z\",\n            \"user\": {\n                \"id\": \"8bf61627-dbbf-46e0-96ec-72c5f8372db2\",\n                \"fullname\": \"Pablo Gavi\",\n                \"avatar\": null,\n                \"phone\": null\n            },\n            \"products\": []\n        },\n        {\n            \"id\": \"ab90dc29-59d5-4bc2-9ea1-f0e1b6e042bd\",\n            \"userId\": \"2e947aa8-21a1-4a9d-8e0a-1aa321f8105c\",\n            \"name\": \"Lazada\",\n            \"email\": \"lazada@mail.com\",\n            \"address\": \"Balikpapan\",\n            \"phone\": \"08115907100\",\n            \"avatar\": null,\n            \"type\": \"Merchant\",\n            \"status\": \"active\",\n            \"createdAt\": \"2025-04-25T18:59:34.226Z\",\n            \"updatedAt\": \"2025-04-26T13:05:51.553Z\",\n            \"user\": {\n                \"id\": \"2e947aa8-21a1-4a9d-8e0a-1aa321f8105c\",\n                \"fullname\": \"Raphael Dias\",\n                \"avatar\": null,\n                \"phone\": \"081257091234\"\n            },\n            \"products\": [\n                {\n                    \"id\": \"86090e9e-a132-47ea-937e-0864d6bb3a11\",\n                    \"name\": \"Kaos Polos Premium\"\n                },\n                {\n                    \"id\": \"41474b02-347c-4bf1-95be-a254f03c241c\",\n                    \"name\": \"Kaos Polos Panjang\"\n                },\n                {\n                    \"id\": \"a96b29b4-5ffd-4c40-996c-c9bc0ef52ac3\",\n                    \"name\": \"Kaos Polos Pendek\"\n                },\n                {\n                    \"id\": \"0c4d9e90-50a2-40bc-a0b1-78b640c417e4\",\n                    \"name\": \"Kemeja Formal\"\n                },\n                {\n                    \"id\": \"4cf8e33d-ff5f-44ee-9cb5-2983444028a5\",\n                    \"name\": \"Jaket Hoodie\"\n                },\n                {\n                    \"id\": \"8825c821-1599-4b38-8a00-cee3a72351bf\",\n                    \"name\": \"Sweater Rajut\"\n                },\n                {\n                    \"id\": \"7bca2c7d-796f-481d-a035-65b5a15914cf\",\n                    \"name\": \"Dress Casual\"\n                },\n                {\n                    \"id\": \"e82dfc01-c26a-4aef-a95d-dde83e66f72e\",\n                    \"name\": \"Rok Mini\"\n                },\n                {\n                    \"id\": \"eb4310d2-c9c9-46e6-94aa-80460f94a549\",\n                    \"name\": \"Tas Selempang\"\n                },\n                {\n                    \"id\": \"d147ddb0-f7f0-4c28-bc74-789fd3ba2102\",\n                    \"name\": \"Sepatu Sneakers\"\n                }\n            ]\n        }\n    ],\n    \"pagination\": {\n        \"total\": 2,\n        \"page\": 1,\n        \"limit\": 10,\n        \"totalPages\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "merchantById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/merchant/ab90dc29-59d5-4bc2-9ea1-f0e1b6e042bd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"merchant",
+								"ab90dc29-59d5-4bc2-9ea1-f0e1b6e042bd"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/merchant/ab90dc29-59d5-4bc2-9ea1-f0e1b6e042bd",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"merchant",
+										"ab90dc29-59d5-4bc2-9ea1-f0e1b6e042bd"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "499"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1f3-yKgPY8tFTuCQahrN/Uqfzxivp4s\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Apr 2025 13:06:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"message\": \"Successfully get spesific merchant!\",\n    \"merchant\": {\n        \"id\": \"ab90dc29-59d5-4bc2-9ea1-f0e1b6e042bd\",\n        \"userId\": \"2e947aa8-21a1-4a9d-8e0a-1aa321f8105c\",\n        \"name\": \"Lazada\",\n        \"email\": \"lazada@mail.com\",\n        \"address\": \"Balikpapan\",\n        \"phone\": \"08115907100\",\n        \"avatar\": null,\n        \"type\": \"Merchant\",\n        \"status\": \"active\",\n        \"createdAt\": \"2025-04-25T18:59:34.226Z\",\n        \"updatedAt\": \"2025-04-26T13:05:51.553Z\",\n        \"user\": {\n            \"id\": \"2e947aa8-21a1-4a9d-8e0a-1aa321f8105c\",\n            \"fullname\": \"Raphael Dias\",\n            \"avatar\": null,\n            \"phone\": \"081257091234\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "updateMerchant",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Lazada",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "address",
+									"value": "Balikpapan",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "08115907100",
+									"type": "text"
+								},
+								{
+									"key": "avatar",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "type",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/merchant/ab90dc29-59d5-4bc2-9ea1-f0e1b6e042bd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"merchant",
+								"ab90dc29-59d5-4bc2-9ea1-f0e1b6e042bd"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Lazada",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "address",
+											"value": "Balikpapan",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "08115907100",
+											"type": "text"
+										},
+										{
+											"key": "avatar",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "type",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/merchant/ab90dc29-59d5-4bc2-9ea1-f0e1b6e042bd",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"merchant",
+										"ab90dc29-59d5-4bc2-9ea1-f0e1b6e042bd"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "494"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1ee-OEPOWXugZvMs9JFfBSa4+GMElz4\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Apr 2025 13:05:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"message\": \"Successfully update merchant !\",\n    \"merchant\": {\n        \"id\": \"ab90dc29-59d5-4bc2-9ea1-f0e1b6e042bd\",\n        \"userId\": \"2e947aa8-21a1-4a9d-8e0a-1aa321f8105c\",\n        \"name\": \"Lazada\",\n        \"email\": \"lazada@mail.com\",\n        \"address\": \"Balikpapan\",\n        \"phone\": \"08115907100\",\n        \"avatar\": null,\n        \"type\": \"Merchant\",\n        \"status\": \"active\",\n        \"createdAt\": \"2025-04-25T18:59:34.226Z\",\n        \"updatedAt\": \"2025-04-26T13:05:51.553Z\",\n        \"user\": {\n            \"id\": \"2e947aa8-21a1-4a9d-8e0a-1aa321f8105c\",\n            \"fullname\": \"Raphael Dias\",\n            \"avatar\": null,\n            \"phone\": \"081257091234\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "deleteMerchant",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/merchant/10240c37-f793-4942-978c-b9bc427b4f0e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"merchant",
+								"10240c37-f793-4942-978c-b9bc427b4f0e"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/merchant/10240c37-f793-4942-978c-b9bc427b4f0e",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"merchant",
+										"10240c37-f793-4942-978c-b9bc427b4f0e"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "59"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3b-Zn7mfbSV/8NCjok4rqlvdt3qK70\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 25 Apr 2025 18:59:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"message\": \"Merchant successfully deleted !\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Product Variants",
+					"item": [
+						{
+							"name": "allProductVariant",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/product/7bca2c7d-796f-481d-a035-65b5a15914cf/variants",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"product",
+										"7bca2c7d-796f-481d-a035-65b5a15914cf",
+										"variants"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:3000/api/product/7bca2c7d-796f-481d-a035-65b5a15914cf/variants",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"product",
+												"7bca2c7d-796f-481d-a035-65b5a15914cf",
+												"variants"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "2760"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"ac8-nWVqiRqKHGXSPdICrNPuTZy1Sx4\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 27 Apr 2025 07:54:12 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"error\": false,\n    \"message\": \"Product variants retrieved successfully\",\n    \"data\": {\n        \"product\": {\n            \"id\": \"7bca2c7d-796f-481d-a035-65b5a15914cf\",\n            \"name\": \"Dress Casual\",\n            \"has_variant\": true\n        },\n        \"variants\": [\n            {\n                \"id\": \"1dae4bb2-92e3-4598-879d-8c81e5cda8e9\",\n                \"productId\": \"7bca2c7d-796f-481d-a035-65b5a15914cf\",\n                \"colourId\": \"8c8ee0fe-1a19-48b3-b6ae-93441cb9b0a1\",\n                \"sizeId\": \"af5f4da1-a3d9-4545-8d97-0a96f1dea549\",\n                \"sku\": \"DC-FLORAL-S\",\n                \"stock\": 25,\n                \"createdAt\": \"2025-04-26T12:44:46.389Z\",\n                \"updatedAt\": \"2025-04-26T12:44:46.389Z\",\n                \"colour\": {\n                    \"id\": \"8c8ee0fe-1a19-48b3-b6ae-93441cb9b0a1\",\n                    \"name\": \"Biru\",\n                    \"hex\": \"#0000FF\",\n                    \"createdAt\": \"2025-04-26T01:06:40.454Z\",\n                    \"updatedAt\": \"2025-04-26T01:06:40.454Z\"\n                },\n                \"size\": {\n                    \"id\": \"af5f4da1-a3d9-4545-8d97-0a96f1dea549\",\n                    \"name\": \"M\",\n                    \"length\": 65,\n                    \"height\": 45,\n                    \"width\": 35,\n                    \"createdAt\": \"2025-04-26T01:06:40.460Z\",\n                    \"updatedAt\": \"2025-04-26T01:06:40.460Z\"\n                }\n            },\n            {\n                \"id\": \"7952efa8-3113-4af7-9aa4-acd0d8eb02b1\",\n                \"productId\": \"7bca2c7d-796f-481d-a035-65b5a15914cf\",\n                \"colourId\": \"8c8ee0fe-1a19-48b3-b6ae-93441cb9b0a1\",\n                \"sizeId\": \"af5f4da1-a3d9-4545-8d97-0a96f1dea549\",\n                \"sku\": \"DC-BLACK-S\",\n                \"stock\": 20,\n                \"createdAt\": \"2025-04-26T12:44:46.389Z\",\n                \"updatedAt\": \"2025-04-26T12:44:46.389Z\",\n                \"colour\": {\n                    \"id\": \"8c8ee0fe-1a19-48b3-b6ae-93441cb9b0a1\",\n                    \"name\": \"Biru\",\n                    \"hex\": \"#0000FF\",\n                    \"createdAt\": \"2025-04-26T01:06:40.454Z\",\n                    \"updatedAt\": \"2025-04-26T01:06:40.454Z\"\n                },\n                \"size\": {\n                    \"id\": \"af5f4da1-a3d9-4545-8d97-0a96f1dea549\",\n                    \"name\": \"M\",\n                    \"length\": 65,\n                    \"height\": 45,\n                    \"width\": 35,\n                    \"createdAt\": \"2025-04-26T01:06:40.460Z\",\n                    \"updatedAt\": \"2025-04-26T01:06:40.460Z\"\n                }\n            },\n            {\n                \"id\": \"7b0a889b-d7c6-4507-8443-a77d2f54f28b\",\n                \"productId\": \"7bca2c7d-796f-481d-a035-65b5a15914cf\",\n                \"colourId\": \"8c8ee0fe-1a19-48b3-b6ae-93441cb9b0a1\",\n                \"sizeId\": \"af5f4da1-a3d9-4545-8d97-0a96f1dea549\",\n                \"sku\": \"DC-FLORAL-M\",\n                \"stock\": 15,\n                \"createdAt\": \"2025-04-26T12:44:46.389Z\",\n                \"updatedAt\": \"2025-04-26T12:44:46.389Z\",\n                \"colour\": {\n                    \"id\": \"8c8ee0fe-1a19-48b3-b6ae-93441cb9b0a1\",\n                    \"name\": \"Biru\",\n                    \"hex\": \"#0000FF\",\n                    \"createdAt\": \"2025-04-26T01:06:40.454Z\",\n                    \"updatedAt\": \"2025-04-26T01:06:40.454Z\"\n                },\n                \"size\": {\n                    \"id\": \"af5f4da1-a3d9-4545-8d97-0a96f1dea549\",\n                    \"name\": \"M\",\n                    \"length\": 65,\n                    \"height\": 45,\n                    \"width\": 35,\n                    \"createdAt\": \"2025-04-26T01:06:40.460Z\",\n                    \"updatedAt\": \"2025-04-26T01:06:40.460Z\"\n                }\n            },\n            {\n                \"id\": \"3734221d-8f86-48b3-8ba6-a4fc5e28b794\",\n                \"productId\": \"7bca2c7d-796f-481d-a035-65b5a15914cf\",\n                \"colourId\": \"8c8ee0fe-1a19-48b3-b6ae-93441cb9b0a1\",\n                \"sizeId\": \"af5f4da1-a3d9-4545-8d97-0a96f1dea549\",\n                \"sku\": \"DC-BLACK-M\",\n                \"stock\": 10,\n                \"createdAt\": \"2025-04-26T12:44:46.389Z\",\n                \"updatedAt\": \"2025-04-26T12:44:46.389Z\",\n                \"colour\": {\n                    \"id\": \"8c8ee0fe-1a19-48b3-b6ae-93441cb9b0a1\",\n                    \"name\": \"Biru\",\n                    \"hex\": \"#0000FF\",\n                    \"createdAt\": \"2025-04-26T01:06:40.454Z\",\n                    \"updatedAt\": \"2025-04-26T01:06:40.454Z\"\n                },\n                \"size\": {\n                    \"id\": \"af5f4da1-a3d9-4545-8d97-0a96f1dea549\",\n                    \"name\": \"M\",\n                    \"length\": 65,\n                    \"height\": 45,\n                    \"width\": 35,\n                    \"createdAt\": \"2025-04-26T01:06:40.460Z\",\n                    \"updatedAt\": \"2025-04-26T01:06:40.460Z\"\n                }\n            }\n        ]\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "addVariantToProduct",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"sku\": \"SS-RED-40\",\n  \"stock\": 15,\n  \"colourId\": \"8c8ee0fe-1a19-48b3-b6ae-93441cb9b0a1\",\n  \"sizeId\": \"af5f4da1-a3d9-4545-8d97-0a96f1dea549\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/product/7bca2c7d-796f-481d-a035-65b5a15914cf/variant",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"product",
+										"7bca2c7d-796f-481d-a035-65b5a15914cf",
+										"variant"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"sku\": \"SS-RED-40\",\n  \"stock\": 15,\n  \"colourId\": \"8c8ee0fe-1a19-48b3-b6ae-93441cb9b0a1\",\n  \"sizeId\": \"af5f4da1-a3d9-4545-8d97-0a96f1dea549\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/product/7bca2c7d-796f-481d-a035-65b5a15914cf/variant",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"product",
+												"7bca2c7d-796f-481d-a035-65b5a15914cf",
+												"variant"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "820"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"334-3vYnA1nFpPdOkwie3S2creqP48k\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 27 Apr 2025 07:56:43 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"error\": false,\n    \"message\": \"Product variant added successfully\",\n    \"data\": {\n        \"product\": {\n            \"id\": \"7bca2c7d-796f-481d-a035-65b5a15914cf\",\n            \"name\": \"Dress Casual\",\n            \"has_variant\": true\n        },\n        \"variant\": {\n            \"id\": \"d92d7871-058e-4c09-92b9-bf4ee2318183\",\n            \"productId\": \"7bca2c7d-796f-481d-a035-65b5a15914cf\",\n            \"colourId\": \"8c8ee0fe-1a19-48b3-b6ae-93441cb9b0a1\",\n            \"sizeId\": \"af5f4da1-a3d9-4545-8d97-0a96f1dea549\",\n            \"sku\": \"SS-RED-40\",\n            \"stock\": 15,\n            \"createdAt\": \"2025-04-27T07:56:43.549Z\",\n            \"updatedAt\": \"2025-04-27T07:56:43.549Z\",\n            \"colour\": {\n                \"id\": \"8c8ee0fe-1a19-48b3-b6ae-93441cb9b0a1\",\n                \"name\": \"Biru\",\n                \"hex\": \"#0000FF\",\n                \"createdAt\": \"2025-04-26T01:06:40.454Z\",\n                \"updatedAt\": \"2025-04-26T01:06:40.454Z\"\n            },\n            \"size\": {\n                \"id\": \"af5f4da1-a3d9-4545-8d97-0a96f1dea549\",\n                \"name\": \"M\",\n                \"length\": 65,\n                \"height\": 45,\n                \"width\": 35,\n                \"createdAt\": \"2025-04-26T01:06:40.460Z\",\n                \"updatedAt\": \"2025-04-26T01:06:40.460Z\"\n            }\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "updateproductVariant",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"stock\": 30\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/product/7bca2c7d-796f-481d-a035-65b5a15914cf/variant/1dae4bb2-92e3-4598-879d-8c81e5cda8e9",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"product",
+										"7bca2c7d-796f-481d-a035-65b5a15914cf",
+										"variant",
+										"1dae4bb2-92e3-4598-879d-8c81e5cda8e9"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"stock\": 30\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/product/7bca2c7d-796f-481d-a035-65b5a15914cf/variant/1dae4bb2-92e3-4598-879d-8c81e5cda8e9",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"product",
+												"7bca2c7d-796f-481d-a035-65b5a15914cf",
+												"variant",
+												"1dae4bb2-92e3-4598-879d-8c81e5cda8e9"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "812"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"32c-4hn9RTC2PIZd86yl50PUV+NjNtw\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 27 Apr 2025 08:22:02 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"error\": false,\n    \"message\": \"Product variant updated successfully\",\n    \"data\": {\n        \"id\": \"1dae4bb2-92e3-4598-879d-8c81e5cda8e9\",\n        \"productId\": \"7bca2c7d-796f-481d-a035-65b5a15914cf\",\n        \"colourId\": \"8c8ee0fe-1a19-48b3-b6ae-93441cb9b0a1\",\n        \"sizeId\": \"af5f4da1-a3d9-4545-8d97-0a96f1dea549\",\n        \"sku\": \"DC-FLORAL-S\",\n        \"stock\": 30,\n        \"createdAt\": \"2025-04-26T12:44:46.389Z\",\n        \"updatedAt\": \"2025-04-27T08:22:02.667Z\",\n        \"product\": {\n            \"id\": \"7bca2c7d-796f-481d-a035-65b5a15914cf\",\n            \"name\": \"Dress Casual\",\n            \"has_variant\": true\n        },\n        \"colour\": {\n            \"id\": \"8c8ee0fe-1a19-48b3-b6ae-93441cb9b0a1\",\n            \"name\": \"Biru\",\n            \"hex\": \"#0000FF\",\n            \"createdAt\": \"2025-04-26T01:06:40.454Z\",\n            \"updatedAt\": \"2025-04-26T01:06:40.454Z\"\n        },\n        \"size\": {\n            \"id\": \"af5f4da1-a3d9-4545-8d97-0a96f1dea549\",\n            \"name\": \"M\",\n            \"length\": 65,\n            \"height\": 45,\n            \"width\": 35,\n            \"createdAt\": \"2025-04-26T01:06:40.460Z\",\n            \"updatedAt\": \"2025-04-26T01:06:40.460Z\"\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "deleteProductVariant",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/product/7bca2c7d-796f-481d-a035-65b5a15914cf/variant/1dae4bb2-92e3-4598-879d-8c81e5cda8e9",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"product",
+										"7bca2c7d-796f-481d-a035-65b5a15914cf",
+										"variant",
+										"1dae4bb2-92e3-4598-879d-8c81e5cda8e9"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:3000/api/product/7bca2c7d-796f-481d-a035-65b5a15914cf/variant/1dae4bb2-92e3-4598-879d-8c81e5cda8e9",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"product",
+												"7bca2c7d-796f-481d-a035-65b5a15914cf",
+												"variant",
+												"1dae4bb2-92e3-4598-879d-8c81e5cda8e9"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "182"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"b6-7HeZSJdVFRkuzj6Iz0XqHGUYRjE\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 27 Apr 2025 08:33:22 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"error\": false,\n    \"message\": \"Product variant deleted successfully\",\n    \"data\": {\n        \"deletedVariantId\": \"1dae4bb2-92e3-4598-879d-8c81e5cda8e9\",\n        \"remainingVariantCount\": 4,\n        \"productHasVariant\": true\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "createProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Sepatu Sneakers\",\n  \"price\": 399000,\n  \"description\": \"Sepatu sneakers nyaman untuk aktivitas sehari-hari\",\n  \"discount\": 10,\n  \"weight\": 0.8,\n  \"categoryId\": \"9ea05c17-2d15-4af8-a253-8fd977f8426f\",\n  \"merchantId\": \"ab90dc29-59d5-4bc2-9ea1-f0e1b6e042bd\",\n  \"has_variant\": false\n//   \"variants\": [\n//     {\n//       \"colourId\": \"8c8ee0fe-1a19-48b3-b6ae-93441cb9b0a1\",\n//       \"sizeId\": \"af5f4da1-a3d9-4545-8d97-0a96f1dea549\",\n//       \"sku\": \"SS-WHITE-40\",\n//       \"stock\": 18\n//     },\n//     {\n//       \"colourId\": \"8c8ee0fe-1a19-48b3-b6ae-93441cb9b0a1\",\n//       \"sizeId\": \"af5f4da1-a3d9-4545-8d97-0a96f1dea549\",\n//       \"sku\": \"SS-BLACK-40\",\n//       \"stock\": 15\n//     },\n//     {\n//       \"colourId\": \"8c8ee0fe-1a19-48b3-b6ae-93441cb9b0a1\",\n//       \"sizeId\": \"af5f4da1-a3d9-4545-8d97-0a96f1dea549\",\n//       \"sku\": \"SS-WHITE-42\",\n//       \"stock\": 12\n//     },\n//     {\n//       \"colourId\": \"8c8ee0fe-1a19-48b3-b6ae-93441cb9b0a1\",\n//       \"sizeId\": \"af5f4da1-a3d9-4545-8d97-0a96f1dea549\",\n//       \"sku\": \"SS-BLACK-42\",\n//       \"stock\": 10\n//     }\n//   ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"product"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success without variants",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Kaos Polos Panjang\",\n  \"price\": 199000,\n  \"description\": \"Kaos polos berkualitas tinggi\",\n  \"discount\": 10,\n  \"weight\": 0.2,\n  \"categoryId\": \"9ea05c17-2d15-4af8-a253-8fd977f8426f\",\n  \"merchantId\": \"ab90dc29-59d5-4bc2-9ea1-f0e1b6e042bd\",\n  \"has_variant\": false\n//   \"variants\": [\n//     {\n//       \"colourId\": \"8c8ee0fe-1a19-48b3-b6ae-93441cb9b0a1\",\n//       \"sizeId\": \"af5f4da1-a3d9-4545-8d97-0a96f1dea549\",\n//       \"sku\": \"KS-BLUE-M\",\n//       \"stock\": 50\n//     }\n//   ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/product",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"product"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "967"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3c7-Wb1zK9wJyNob0g3fIKuUe77+UKo\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Apr 2025 01:21:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"message\": \"Product created successfully\",\n    \"data\": {\n        \"id\": \"16d2f485-6db3-45e6-866e-645633d71a0d\",\n        \"merchantId\": \"ab90dc29-59d5-4bc2-9ea1-f0e1b6e042bd\",\n        \"categoryId\": \"9ea05c17-2d15-4af8-a253-8fd977f8426f\",\n        \"name\": \"Kaos Polos Panjang\",\n        \"price\": 199000,\n        \"discount\": 10,\n        \"description\": \"Kaos polos berkualitas tinggi\",\n        \"has_variant\": false,\n        \"weight\": 0.2,\n        \"avatar\": null,\n        \"createdAt\": \"2025-04-26T01:21:52.738Z\",\n        \"updatedAt\": \"2025-04-26T01:21:52.738Z\",\n        \"merchant\": {\n            \"id\": \"ab90dc29-59d5-4bc2-9ea1-f0e1b6e042bd\",\n            \"name\": \"Lazada\"\n        },\n        \"category\": {\n            \"id\": \"9ea05c17-2d15-4af8-a253-8fd977f8426f\",\n            \"name\": \"Pakaian\",\n            \"type\": \"Baju\",\n            \"createdAt\": \"2025-04-26T01:06:40.415Z\",\n            \"updatedAt\": \"2025-04-26T01:06:40.415Z\"\n        },\n        \"variantProducts\": [\n            {\n                \"id\": \"2378cb1b-8635-4515-ba86-d2b04eb8a658\",\n                \"productId\": \"16d2f485-6db3-45e6-866e-645633d71a0d\",\n                \"colourId\": null,\n                \"sizeId\": null,\n                \"sku\": \"KAO-1745630512751\",\n                \"stock\": 0,\n                \"createdAt\": \"2025-04-26T01:21:52.752Z\",\n                \"updatedAt\": \"2025-04-26T01:21:52.752Z\",\n                \"colour\": null,\n                \"size\": null\n            }\n        ]\n    }\n}"
+						},
+						{
+							"name": "success with variants",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Sepatu Sneakers\",\n  \"price\": 399000,\n  \"description\": \"Sepatu sneakers nyaman untuk aktivitas sehari-hari\",\n  \"discount\": 10,\n  \"weight\": 0.8,\n  \"categoryId\": \"9ea05c17-2d15-4af8-a253-8fd977f8426f\",\n  \"merchantId\": \"ab90dc29-59d5-4bc2-9ea1-f0e1b6e042bd\",\n  \"has_variant\": true,\n  \"variants\": [\n    {\n      \"colourId\": \"8c8ee0fe-1a19-48b3-b6ae-93441cb9b0a1\",\n      \"sizeId\": \"af5f4da1-a3d9-4545-8d97-0a96f1dea549\",\n      \"sku\": \"SS-WHITE-40\",\n      \"stock\": 18\n    },\n    {\n      \"colourId\": \"8c8ee0fe-1a19-48b3-b6ae-93441cb9b0a1\",\n      \"sizeId\": \"af5f4da1-a3d9-4545-8d97-0a96f1dea549\",\n      \"sku\": \"SS-BLACK-40\",\n      \"stock\": 15\n    },\n    {\n      \"colourId\": \"8c8ee0fe-1a19-48b3-b6ae-93441cb9b0a1\",\n      \"sizeId\": \"af5f4da1-a3d9-4545-8d97-0a96f1dea549\",\n      \"sku\": \"SS-WHITE-42\",\n      \"stock\": 12\n    },\n    {\n      \"colourId\": \"8c8ee0fe-1a19-48b3-b6ae-93441cb9b0a1\",\n      \"sizeId\": \"af5f4da1-a3d9-4545-8d97-0a96f1dea549\",\n      \"sku\": \"SS-BLACK-42\",\n      \"stock\": 10\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/product",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"product"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "3293"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"cdd-zkMkwzYUZiIHQJyn69bGRBiLUU8\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Apr 2025 12:45:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"message\": \"Product created successfully\",\n    \"data\": {\n        \"id\": \"d147ddb0-f7f0-4c28-bc74-789fd3ba2102\",\n        \"merchantId\": \"ab90dc29-59d5-4bc2-9ea1-f0e1b6e042bd\",\n        \"categoryId\": \"9ea05c17-2d15-4af8-a253-8fd977f8426f\",\n        \"name\": \"Sepatu Sneakers\",\n        \"price\": 399000,\n        \"discount\": 10,\n        \"description\": \"Sepatu sneakers nyaman untuk aktivitas sehari-hari\",\n        \"has_variant\": true,\n        \"weight\": 0.8,\n        \"avatar\": null,\n        \"createdAt\": \"2025-04-26T12:45:36.938Z\",\n        \"updatedAt\": \"2025-04-26T12:45:36.938Z\",\n        \"merchant\": {\n            \"id\": \"ab90dc29-59d5-4bc2-9ea1-f0e1b6e042bd\",\n            \"name\": \"Lazada\"\n        },\n        \"category\": {\n            \"id\": \"9ea05c17-2d15-4af8-a253-8fd977f8426f\",\n            \"name\": \"Pakaian\",\n            \"type\": \"Baju\",\n            \"createdAt\": \"2025-04-26T01:06:40.415Z\",\n            \"updatedAt\": \"2025-04-26T01:06:40.415Z\"\n        },\n        \"variantProducts\": [\n            {\n                \"id\": \"10d12855-b114-4c2b-86c9-0ebcd9ebc947\",\n                \"productId\": \"d147ddb0-f7f0-4c28-bc74-789fd3ba2102\",\n                \"colourId\": \"8c8ee0fe-1a19-48b3-b6ae-93441cb9b0a1\",\n                \"sizeId\": \"af5f4da1-a3d9-4545-8d97-0a96f1dea549\",\n                \"sku\": \"SS-WHITE-40\",\n                \"stock\": 18,\n                \"createdAt\": \"2025-04-26T12:45:36.940Z\",\n                \"updatedAt\": \"2025-04-26T12:45:36.940Z\",\n                \"colour\": {\n                    \"id\": \"8c8ee0fe-1a19-48b3-b6ae-93441cb9b0a1\",\n                    \"name\": \"Biru\",\n                    \"hex\": \"#0000FF\",\n                    \"createdAt\": \"2025-04-26T01:06:40.454Z\",\n                    \"updatedAt\": \"2025-04-26T01:06:40.454Z\"\n                },\n                \"size\": {\n                    \"id\": \"af5f4da1-a3d9-4545-8d97-0a96f1dea549\",\n                    \"name\": \"M\",\n                    \"length\": 65,\n                    \"height\": 45,\n                    \"width\": 35,\n                    \"createdAt\": \"2025-04-26T01:06:40.460Z\",\n                    \"updatedAt\": \"2025-04-26T01:06:40.460Z\"\n                }\n            },\n            {\n                \"id\": \"3db18418-b0c4-4084-8df4-36c249caeca6\",\n                \"productId\": \"d147ddb0-f7f0-4c28-bc74-789fd3ba2102\",\n                \"colourId\": \"8c8ee0fe-1a19-48b3-b6ae-93441cb9b0a1\",\n                \"sizeId\": \"af5f4da1-a3d9-4545-8d97-0a96f1dea549\",\n                \"sku\": \"SS-BLACK-40\",\n                \"stock\": 15,\n                \"createdAt\": \"2025-04-26T12:45:36.940Z\",\n                \"updatedAt\": \"2025-04-26T12:45:36.940Z\",\n                \"colour\": {\n                    \"id\": \"8c8ee0fe-1a19-48b3-b6ae-93441cb9b0a1\",\n                    \"name\": \"Biru\",\n                    \"hex\": \"#0000FF\",\n                    \"createdAt\": \"2025-04-26T01:06:40.454Z\",\n                    \"updatedAt\": \"2025-04-26T01:06:40.454Z\"\n                },\n                \"size\": {\n                    \"id\": \"af5f4da1-a3d9-4545-8d97-0a96f1dea549\",\n                    \"name\": \"M\",\n                    \"length\": 65,\n                    \"height\": 45,\n                    \"width\": 35,\n                    \"createdAt\": \"2025-04-26T01:06:40.460Z\",\n                    \"updatedAt\": \"2025-04-26T01:06:40.460Z\"\n                }\n            },\n            {\n                \"id\": \"9b77b3a5-adb4-4f11-a3b6-7a914b103444\",\n                \"productId\": \"d147ddb0-f7f0-4c28-bc74-789fd3ba2102\",\n                \"colourId\": \"8c8ee0fe-1a19-48b3-b6ae-93441cb9b0a1\",\n                \"sizeId\": \"af5f4da1-a3d9-4545-8d97-0a96f1dea549\",\n                \"sku\": \"SS-WHITE-42\",\n                \"stock\": 12,\n                \"createdAt\": \"2025-04-26T12:45:36.940Z\",\n                \"updatedAt\": \"2025-04-26T12:45:36.940Z\",\n                \"colour\": {\n                    \"id\": \"8c8ee0fe-1a19-48b3-b6ae-93441cb9b0a1\",\n                    \"name\": \"Biru\",\n                    \"hex\": \"#0000FF\",\n                    \"createdAt\": \"2025-04-26T01:06:40.454Z\",\n                    \"updatedAt\": \"2025-04-26T01:06:40.454Z\"\n                },\n                \"size\": {\n                    \"id\": \"af5f4da1-a3d9-4545-8d97-0a96f1dea549\",\n                    \"name\": \"M\",\n                    \"length\": 65,\n                    \"height\": 45,\n                    \"width\": 35,\n                    \"createdAt\": \"2025-04-26T01:06:40.460Z\",\n                    \"updatedAt\": \"2025-04-26T01:06:40.460Z\"\n                }\n            },\n            {\n                \"id\": \"f59a755f-2d1a-448a-ac31-20692737019a\",\n                \"productId\": \"d147ddb0-f7f0-4c28-bc74-789fd3ba2102\",\n                \"colourId\": \"8c8ee0fe-1a19-48b3-b6ae-93441cb9b0a1\",\n                \"sizeId\": \"af5f4da1-a3d9-4545-8d97-0a96f1dea549\",\n                \"sku\": \"SS-BLACK-42\",\n                \"stock\": 10,\n                \"createdAt\": \"2025-04-26T12:45:36.940Z\",\n                \"updatedAt\": \"2025-04-26T12:45:36.940Z\",\n                \"colour\": {\n                    \"id\": \"8c8ee0fe-1a19-48b3-b6ae-93441cb9b0a1\",\n                    \"name\": \"Biru\",\n                    \"hex\": \"#0000FF\",\n                    \"createdAt\": \"2025-04-26T01:06:40.454Z\",\n                    \"updatedAt\": \"2025-04-26T01:06:40.454Z\"\n                },\n                \"size\": {\n                    \"id\": \"af5f4da1-a3d9-4545-8d97-0a96f1dea549\",\n                    \"name\": \"M\",\n                    \"length\": 65,\n                    \"height\": 45,\n                    \"width\": 35,\n                    \"createdAt\": \"2025-04-26T01:06:40.460Z\",\n                    \"updatedAt\": \"2025-04-26T01:06:40.460Z\"\n                }\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "productById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/product/41474b02-347c-4bf1-95be-a254f03c241c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"product",
+								"41474b02-347c-4bf1-95be-a254f03c241c"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/product/41474b02-347c-4bf1-95be-a254f03c241c",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"product",
+										"41474b02-347c-4bf1-95be-a254f03c241c"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1268"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4f4-1Wl8POC/3L1/q81k5rHcE3gCBrk\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Apr 2025 01:27:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"message\": \"Successfully get product by id\",\n    \"product\": {\n        \"id\": \"41474b02-347c-4bf1-95be-a254f03c241c\",\n        \"merchantId\": \"ab90dc29-59d5-4bc2-9ea1-f0e1b6e042bd\",\n        \"categoryId\": \"9ea05c17-2d15-4af8-a253-8fd977f8426f\",\n        \"name\": \"Kaos Polos Panjang\",\n        \"price\": 199000,\n        \"discount\": 10,\n        \"description\": \"Kaos polos berkualitas tinggi\",\n        \"has_variant\": true,\n        \"weight\": 0.2,\n        \"avatar\": null,\n        \"createdAt\": \"2025-04-26T01:16:44.695Z\",\n        \"updatedAt\": \"2025-04-26T01:16:44.695Z\",\n        \"merchant\": {\n            \"id\": \"ab90dc29-59d5-4bc2-9ea1-f0e1b6e042bd\",\n            \"name\": \"Lazada\"\n        },\n        \"category\": {\n            \"id\": \"9ea05c17-2d15-4af8-a253-8fd977f8426f\",\n            \"name\": \"Pakaian\",\n            \"type\": \"Baju\"\n        },\n        \"variantProducts\": [\n            {\n                \"id\": \"d0ad1952-635a-4efc-a0e2-433e241d59c3\",\n                \"productId\": \"41474b02-347c-4bf1-95be-a254f03c241c\",\n                \"colourId\": \"8c8ee0fe-1a19-48b3-b6ae-93441cb9b0a1\",\n                \"sizeId\": \"af5f4da1-a3d9-4545-8d97-0a96f1dea549\",\n                \"sku\": \"KS-BLUE-M\",\n                \"stock\": 50,\n                \"createdAt\": \"2025-04-26T01:16:44.702Z\",\n                \"updatedAt\": \"2025-04-26T01:16:44.702Z\",\n                \"colour\": {\n                    \"id\": \"8c8ee0fe-1a19-48b3-b6ae-93441cb9b0a1\",\n                    \"name\": \"Biru\",\n                    \"hex\": \"#0000FF\",\n                    \"createdAt\": \"2025-04-26T01:06:40.454Z\",\n                    \"updatedAt\": \"2025-04-26T01:06:40.454Z\"\n                },\n                \"size\": {\n                    \"id\": \"af5f4da1-a3d9-4545-8d97-0a96f1dea549\",\n                    \"name\": \"M\",\n                    \"length\": 65,\n                    \"height\": 45,\n                    \"width\": 35,\n                    \"createdAt\": \"2025-04-26T01:06:40.460Z\",\n                    \"updatedAt\": \"2025-04-26T01:06:40.460Z\"\n                }\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "allProducts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/products",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"products"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "4624"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1210-C+c74sFqlBD201MeMV+zXvTGMuU\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Apr 2025 02:51:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"message\": \"Successfully get all products\",\n    \"products\": [\n        {\n            \"id\": \"41474b02-347c-4bf1-95be-a254f03c241c\",\n            \"merchantId\": \"ab90dc29-59d5-4bc2-9ea1-f0e1b6e042bd\",\n            \"categoryId\": \"9ea05c17-2d15-4af8-a253-8fd977f8426f\",\n            \"name\": \"Kaos Polos Panjang\",\n            \"price\": 199000,\n            \"discount\": 10,\n            \"description\": \"Kaos polos berkualitas tinggi\",\n            \"has_variant\": true,\n            \"weight\": 0.2,\n            \"avatar\": null,\n            \"createdAt\": \"2025-04-26T01:16:44.695Z\",\n            \"updatedAt\": \"2025-04-26T01:16:44.695Z\",\n            \"merchant\": {\n                \"id\": \"ab90dc29-59d5-4bc2-9ea1-f0e1b6e042bd\",\n                \"name\": \"Lazada\"\n            },\n            \"category\": {\n                \"id\": \"9ea05c17-2d15-4af8-a253-8fd977f8426f\",\n                \"name\": \"Pakaian\",\n                \"type\": \"Baju\"\n            },\n            \"variantProducts\": [\n                {\n                    \"id\": \"d0ad1952-635a-4efc-a0e2-433e241d59c3\",\n                    \"productId\": \"41474b02-347c-4bf1-95be-a254f03c241c\",\n                    \"colourId\": \"8c8ee0fe-1a19-48b3-b6ae-93441cb9b0a1\",\n                    \"sizeId\": \"af5f4da1-a3d9-4545-8d97-0a96f1dea549\",\n                    \"sku\": \"KS-BLUE-M\",\n                    \"stock\": 50,\n                    \"createdAt\": \"2025-04-26T01:16:44.702Z\",\n                    \"updatedAt\": \"2025-04-26T01:16:44.702Z\",\n                    \"colour\": {\n                        \"id\": \"8c8ee0fe-1a19-48b3-b6ae-93441cb9b0a1\",\n                        \"name\": \"Biru\",\n                        \"hex\": \"#0000FF\",\n                        \"createdAt\": \"2025-04-26T01:06:40.454Z\",\n                        \"updatedAt\": \"2025-04-26T01:06:40.454Z\"\n                    },\n                    \"size\": {\n                        \"id\": \"af5f4da1-a3d9-4545-8d97-0a96f1dea549\",\n                        \"name\": \"M\",\n                        \"length\": 65,\n                        \"height\": 45,\n                        \"width\": 35,\n                        \"createdAt\": \"2025-04-26T01:06:40.460Z\",\n                        \"updatedAt\": \"2025-04-26T01:06:40.460Z\"\n                    }\n                }\n            ]\n        },\n        {\n            \"id\": \"16d2f485-6db3-45e6-866e-645633d71a0d\",\n            \"merchantId\": \"ab90dc29-59d5-4bc2-9ea1-f0e1b6e042bd\",\n            \"categoryId\": \"9ea05c17-2d15-4af8-a253-8fd977f8426f\",\n            \"name\": \"Kaos Polos Panjang\",\n            \"price\": 199000,\n            \"discount\": 10,\n            \"description\": \"Kaos polos berkualitas tinggi\",\n            \"has_variant\": false,\n            \"weight\": 0.2,\n            \"avatar\": null,\n            \"createdAt\": \"2025-04-26T01:21:52.738Z\",\n            \"updatedAt\": \"2025-04-26T01:21:52.738Z\",\n            \"merchant\": {\n                \"id\": \"ab90dc29-59d5-4bc2-9ea1-f0e1b6e042bd\",\n                \"name\": \"Lazada\"\n            },\n            \"category\": {\n                \"id\": \"9ea05c17-2d15-4af8-a253-8fd977f8426f\",\n                \"name\": \"Pakaian\",\n                \"type\": \"Baju\"\n            },\n            \"variantProducts\": [\n                {\n                    \"id\": \"2378cb1b-8635-4515-ba86-d2b04eb8a658\",\n                    \"productId\": \"16d2f485-6db3-45e6-866e-645633d71a0d\",\n                    \"colourId\": null,\n                    \"sizeId\": null,\n                    \"sku\": \"KAO-1745630512751\",\n                    \"stock\": 0,\n                    \"createdAt\": \"2025-04-26T01:21:52.752Z\",\n                    \"updatedAt\": \"2025-04-26T01:21:52.752Z\",\n                    \"colour\": null,\n                    \"size\": null\n                }\n            ]\n        },\n        {\n            \"id\": \"86090e9e-a132-47ea-937e-0864d6bb3a11\",\n            \"merchantId\": \"ab90dc29-59d5-4bc2-9ea1-f0e1b6e042bd\",\n            \"categoryId\": \"9ea05c17-2d15-4af8-a253-8fd977f8426f\",\n            \"name\": \"Kaos Polos Premium\",\n            \"price\": 99000,\n            \"discount\": 10,\n            \"description\": \"Kaos polos berkualitas tinggi\",\n            \"has_variant\": true,\n            \"weight\": 0.2,\n            \"avatar\": null,\n            \"createdAt\": \"2025-04-26T01:09:37.379Z\",\n            \"updatedAt\": \"2025-04-26T01:09:37.379Z\",\n            \"merchant\": {\n                \"id\": \"ab90dc29-59d5-4bc2-9ea1-f0e1b6e042bd\",\n                \"name\": \"Lazada\"\n            },\n            \"category\": {\n                \"id\": \"9ea05c17-2d15-4af8-a253-8fd977f8426f\",\n                \"name\": \"Pakaian\",\n                \"type\": \"Baju\"\n            },\n            \"variantProducts\": [\n                {\n                    \"id\": \"d32c5f0f-55ef-4a66-88af-3fcf4194605b\",\n                    \"productId\": \"86090e9e-a132-47ea-937e-0864d6bb3a11\",\n                    \"colourId\": \"3a15ed2d-e9b4-41a7-b93f-4e7549753065\",\n                    \"sizeId\": \"af5f4da1-a3d9-4545-8d97-0a96f1dea549\",\n                    \"sku\": \"KP-RED-M\",\n                    \"stock\": 50,\n                    \"createdAt\": \"2025-04-26T01:09:37.392Z\",\n                    \"updatedAt\": \"2025-04-26T01:09:37.392Z\",\n                    \"colour\": {\n                        \"id\": \"3a15ed2d-e9b4-41a7-b93f-4e7549753065\",\n                        \"name\": \"Merah\",\n                        \"hex\": \"#FF0000\",\n                        \"createdAt\": \"2025-04-26T01:06:40.452Z\",\n                        \"updatedAt\": \"2025-04-26T01:06:40.452Z\"\n                    },\n                    \"size\": {\n                        \"id\": \"af5f4da1-a3d9-4545-8d97-0a96f1dea549\",\n                        \"name\": \"M\",\n                        \"length\": 65,\n                        \"height\": 45,\n                        \"width\": 35,\n                        \"createdAt\": \"2025-04-26T01:06:40.460Z\",\n                        \"updatedAt\": \"2025-04-26T01:06:40.460Z\"\n                    }\n                },\n                {\n                    \"id\": \"3c8015d0-4687-46d5-817f-94e3878e847e\",\n                    \"productId\": \"86090e9e-a132-47ea-937e-0864d6bb3a11\",\n                    \"colourId\": \"3a15ed2d-e9b4-41a7-b93f-4e7549753065\",\n                    \"sizeId\": \"1f90146d-05d3-4f09-b6dc-6153f83ac455\",\n                    \"sku\": \"KP-RED-L\",\n                    \"stock\": 30,\n                    \"createdAt\": \"2025-04-26T01:09:37.392Z\",\n                    \"updatedAt\": \"2025-04-26T01:09:37.392Z\",\n                    \"colour\": {\n                        \"id\": \"3a15ed2d-e9b4-41a7-b93f-4e7549753065\",\n                        \"name\": \"Merah\",\n                        \"hex\": \"#FF0000\",\n                        \"createdAt\": \"2025-04-26T01:06:40.452Z\",\n                        \"updatedAt\": \"2025-04-26T01:06:40.452Z\"\n                    },\n                    \"size\": {\n                        \"id\": \"1f90146d-05d3-4f09-b6dc-6153f83ac455\",\n                        \"name\": \"L\",\n                        \"length\": 70,\n                        \"height\": 50,\n                        \"width\": 40,\n                        \"createdAt\": \"2025-04-26T01:06:40.460Z\",\n                        \"updatedAt\": \"2025-04-26T01:06:40.460Z\"\n                    }\n                },\n                {\n                    \"id\": \"28aa858b-252c-4c6d-84a5-691016675011\",\n                    \"productId\": \"86090e9e-a132-47ea-937e-0864d6bb3a11\",\n                    \"colourId\": \"adb8c2a2-e357-4de4-9e15-63c6e5b74f3d\",\n                    \"sizeId\": \"af5f4da1-a3d9-4545-8d97-0a96f1dea549\",\n                    \"sku\": \"KP-BLK-M\",\n                    \"stock\": 40,\n                    \"createdAt\": \"2025-04-26T01:09:37.392Z\",\n                    \"updatedAt\": \"2025-04-26T01:09:37.392Z\",\n                    \"colour\": {\n                        \"id\": \"adb8c2a2-e357-4de4-9e15-63c6e5b74f3d\",\n                        \"name\": \"Hitam\",\n                        \"hex\": \"#000000\",\n                        \"createdAt\": \"2025-04-26T01:06:40.455Z\",\n                        \"updatedAt\": \"2025-04-26T01:06:40.455Z\"\n                    },\n                    \"size\": {\n                        \"id\": \"af5f4da1-a3d9-4545-8d97-0a96f1dea549\",\n                        \"name\": \"M\",\n                        \"length\": 65,\n                        \"height\": 45,\n                        \"width\": 35,\n                        \"createdAt\": \"2025-04-26T01:06:40.460Z\",\n                        \"updatedAt\": \"2025-04-26T01:06:40.460Z\"\n                    }\n                }\n            ]\n        }\n    ],\n    \"pagination\": {\n        \"total\": 3,\n        \"page\": 1,\n        \"limit\": 10\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "deleteProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/product/ff8a52ab-d615-478c-a6d5-c512c8e9dfd9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"product",
+								"ff8a52ab-d615-478c-a6d5-c512c8e9dfd9"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/product/ff8a52ab-d615-478c-a6d5-c512c8e9dfd9",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"product",
+										"ff8a52ab-d615-478c-a6d5-c512c8e9dfd9"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "55"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"37-poqAcw4BYSpMDDVXFLdFwn8atKA\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Apr 2025 13:00:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"message\": \"Successfully delete product\"\n}"
+						}
+					]
+				},
+				{
+					"name": "updateProduct",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"price\": 450000,\n  \"variants\": {\n    \"update\": [\n      {\n        \"id\": \"10d12855-b114-4c2b-86c9-0ebcd9ebc947\",\n        \"stock\": 25\n      }\n    ],\n    \"delete\": [\n      \"9b77b3a5-adb4-4f11-a3b6-7a914b103444\", \n      \"f59a755f-2d1a-448a-ac31-20692737019a\"\n    ]\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/product/d147ddb0-f7f0-4c28-bc74-789fd3ba2102",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"product",
+								"d147ddb0-f7f0-4c28-bc74-789fd3ba2102"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"price\": 450000,\n  \"variants\": {\n    \"update\": [\n      {\n        \"id\": \"10d12855-b114-4c2b-86c9-0ebcd9ebc947\",\n        \"stock\": 25\n      }\n    ],\n    \"delete\": [\n      \"9b77b3a5-adb4-4f11-a3b6-7a914b103444\", \n      \"f59a755f-2d1a-448a-ac31-20692737019a\"\n    ]\n  }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/product/d147ddb0-f7f0-4c28-bc74-789fd3ba2102",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"product",
+										"d147ddb0-f7f0-4c28-bc74-789fd3ba2102"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2007"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"7d7-IOvfuT6pYuPErdwQ7PcHRMGnbx0\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 26 Apr 2025 12:58:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"message\": \"Successfully update product\",\n    \"product\": {\n        \"id\": \"d147ddb0-f7f0-4c28-bc74-789fd3ba2102\",\n        \"merchantId\": \"ab90dc29-59d5-4bc2-9ea1-f0e1b6e042bd\",\n        \"categoryId\": \"9ea05c17-2d15-4af8-a253-8fd977f8426f\",\n        \"name\": \"Sepatu Sneakers\",\n        \"price\": 450000,\n        \"discount\": 10,\n        \"description\": \"Sepatu sneakers nyaman untuk aktivitas sehari-hari\",\n        \"has_variant\": true,\n        \"weight\": 0.8,\n        \"avatar\": null,\n        \"createdAt\": \"2025-04-26T12:45:36.938Z\",\n        \"updatedAt\": \"2025-04-26T12:58:25.785Z\",\n        \"merchant\": {\n            \"id\": \"ab90dc29-59d5-4bc2-9ea1-f0e1b6e042bd\",\n            \"name\": \"Lazada\"\n        },\n        \"category\": {\n            \"id\": \"9ea05c17-2d15-4af8-a253-8fd977f8426f\",\n            \"name\": \"Pakaian\",\n            \"type\": \"Baju\",\n            \"createdAt\": \"2025-04-26T01:06:40.415Z\",\n            \"updatedAt\": \"2025-04-26T01:06:40.415Z\"\n        },\n        \"variantProducts\": [\n            {\n                \"id\": \"3db18418-b0c4-4084-8df4-36c249caeca6\",\n                \"productId\": \"d147ddb0-f7f0-4c28-bc74-789fd3ba2102\",\n                \"colourId\": \"8c8ee0fe-1a19-48b3-b6ae-93441cb9b0a1\",\n                \"sizeId\": \"af5f4da1-a3d9-4545-8d97-0a96f1dea549\",\n                \"sku\": \"SS-BLACK-40\",\n                \"stock\": 15,\n                \"createdAt\": \"2025-04-26T12:45:36.940Z\",\n                \"updatedAt\": \"2025-04-26T12:45:36.940Z\",\n                \"colour\": {\n                    \"id\": \"8c8ee0fe-1a19-48b3-b6ae-93441cb9b0a1\",\n                    \"name\": \"Biru\",\n                    \"hex\": \"#0000FF\",\n                    \"createdAt\": \"2025-04-26T01:06:40.454Z\",\n                    \"updatedAt\": \"2025-04-26T01:06:40.454Z\"\n                },\n                \"size\": {\n                    \"id\": \"af5f4da1-a3d9-4545-8d97-0a96f1dea549\",\n                    \"name\": \"M\",\n                    \"length\": 65,\n                    \"height\": 45,\n                    \"width\": 35,\n                    \"createdAt\": \"2025-04-26T01:06:40.460Z\",\n                    \"updatedAt\": \"2025-04-26T01:06:40.460Z\"\n                }\n            },\n            {\n                \"id\": \"10d12855-b114-4c2b-86c9-0ebcd9ebc947\",\n                \"productId\": \"d147ddb0-f7f0-4c28-bc74-789fd3ba2102\",\n                \"colourId\": \"8c8ee0fe-1a19-48b3-b6ae-93441cb9b0a1\",\n                \"sizeId\": \"af5f4da1-a3d9-4545-8d97-0a96f1dea549\",\n                \"sku\": \"SS-WHITE-40\",\n                \"stock\": 25,\n                \"createdAt\": \"2025-04-26T12:45:36.940Z\",\n                \"updatedAt\": \"2025-04-26T12:58:25.775Z\",\n                \"colour\": {\n                    \"id\": \"8c8ee0fe-1a19-48b3-b6ae-93441cb9b0a1\",\n                    \"name\": \"Biru\",\n                    \"hex\": \"#0000FF\",\n                    \"createdAt\": \"2025-04-26T01:06:40.454Z\",\n                    \"updatedAt\": \"2025-04-26T01:06:40.454Z\"\n                },\n                \"size\": {\n                    \"id\": \"af5f4da1-a3d9-4545-8d97-0a96f1dea549\",\n                    \"name\": \"M\",\n                    \"length\": 65,\n                    \"height\": 45,\n                    \"width\": 35,\n                    \"createdAt\": \"2025-04-26T01:06:40.460Z\",\n                    \"updatedAt\": \"2025-04-26T01:06:40.460Z\"\n                }\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "productByCategory",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/products/category/4bc6ddd5-3e98-49af-ada0-38cc106c557f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products",
+								"category",
+								"4bc6ddd5-3e98-49af-ada0-38cc106c557f"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/products/category/4bc6ddd5-3e98-49af-ada0-38cc106c557f",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"products",
+										"category",
+										"4bc6ddd5-3e98-49af-ada0-38cc106c557f"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1146"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"47a-mgA+In86JrbxoN7lqVZM9377I1c\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Apr 2025 08:47:33 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"message\": \"Products retrieved successfully\",\n    \"data\": {\n        \"category\": {\n            \"id\": \"4bc6ddd5-3e98-49af-ada0-38cc106c557f\",\n            \"name\": \"Otomotif\",\n            \"type\": \"Motor\"\n        },\n        \"products\": [\n            {\n                \"id\": \"e8b98278-d911-4ec6-b99d-48513e6d1a49\",\n                \"merchantId\": \"ab90dc29-59d5-4bc2-9ea1-f0e1b6e042bd\",\n                \"categoryId\": \"4bc6ddd5-3e98-49af-ada0-38cc106c557f\",\n                \"name\": \"Motor\",\n                \"price\": 399000,\n                \"discount\": 10,\n                \"description\": \"nyaman untuk aktivitas sehari-hari\",\n                \"has_variant\": false,\n                \"weight\": 0.8,\n                \"avatar\": \"default-product.png\",\n                \"createdAt\": \"2025-04-27T08:47:19.680Z\",\n                \"updatedAt\": \"2025-04-27T08:47:19.680Z\",\n                \"merchant\": {\n                    \"id\": \"ab90dc29-59d5-4bc2-9ea1-f0e1b6e042bd\",\n                    \"name\": \"Lazada\"\n                },\n                \"category\": {\n                    \"id\": \"4bc6ddd5-3e98-49af-ada0-38cc106c557f\",\n                    \"name\": \"Otomotif\",\n                    \"type\": \"Motor\",\n                    \"createdAt\": \"2025-04-26T13:43:29.070Z\",\n                    \"updatedAt\": \"2025-04-26T13:43:29.070Z\"\n                },\n                \"variantProducts\": [\n                    {\n                        \"id\": \"d4046fec-f7b6-4efb-87dc-da4d53fede27\",\n                        \"productId\": \"e8b98278-d911-4ec6-b99d-48513e6d1a49\",\n                        \"colourId\": null,\n                        \"sizeId\": null,\n                        \"sku\": \"MOT-1745743639687\",\n                        \"stock\": 0,\n                        \"createdAt\": \"2025-04-27T08:47:19.688Z\",\n                        \"updatedAt\": \"2025-04-27T08:47:19.688Z\",\n                        \"colour\": null,\n                        \"size\": null\n                    }\n                ]\n            }\n        ],\n        \"pagination\": {\n            \"total\": 1,\n            \"page\": 1,\n            \"limit\": 10,\n            \"totalPages\": 1\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "searchProductByName",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{TOKEN}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/products/search?q=sepatu",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products",
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "sepatu"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/products/search?q=sepatu",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"products",
+										"search"
+									],
+									"query": [
+										{
+											"key": "q",
+											"value": "sepatu"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "3042"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"be2-P0tsee5Fz4F/1KiuFh5yf1Co9ZY\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Apr 2025 08:54:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"message\": \"Search completed successfully\",\n    \"data\": {\n        \"searchTerm\": \"sepatu\",\n        \"products\": [\n            {\n                \"id\": \"707981ad-1a57-4ed9-8aa4-009b3d64809d\",\n                \"merchantId\": \"ab90dc29-59d5-4bc2-9ea1-f0e1b6e042bd\",\n                \"categoryId\": \"9ea05c17-2d15-4af8-a253-8fd977f8426f\",\n                \"name\": \"Sepatu Sneakers\",\n                \"price\": 399000,\n                \"discount\": 10,\n                \"description\": \"Sepatu sneakers nyaman untuk aktivitas sehari-hari\",\n                \"has_variant\": false,\n                \"weight\": 0.8,\n                \"avatar\": \"default-product.png\",\n                \"createdAt\": \"2025-04-27T07:53:47.866Z\",\n                \"updatedAt\": \"2025-04-27T07:53:47.866Z\",\n                \"merchant\": {\n                    \"id\": \"ab90dc29-59d5-4bc2-9ea1-f0e1b6e042bd\",\n                    \"name\": \"Lazada\"\n                },\n                \"category\": {\n                    \"id\": \"9ea05c17-2d15-4af8-a253-8fd977f8426f\",\n                    \"name\": \"Pakaian\",\n                    \"type\": \"Baju\",\n                    \"createdAt\": \"2025-04-26T01:06:40.415Z\",\n                    \"updatedAt\": \"2025-04-26T01:06:40.415Z\"\n                },\n                \"variantProducts\": [\n                    {\n                        \"id\": \"4bd8456c-bc31-4249-8a01-4bb015fc4c80\",\n                        \"productId\": \"707981ad-1a57-4ed9-8aa4-009b3d64809d\",\n                        \"colourId\": null,\n                        \"sizeId\": null,\n                        \"sku\": \"SEP-1745740427881\",\n                        \"stock\": 0,\n                        \"createdAt\": \"2025-04-27T07:53:47.882Z\",\n                        \"updatedAt\": \"2025-04-27T07:53:47.882Z\",\n                        \"colour\": null,\n                        \"size\": null\n                    }\n                ]\n            },\n            {\n                \"id\": \"d147ddb0-f7f0-4c28-bc74-789fd3ba2102\",\n                \"merchantId\": \"ab90dc29-59d5-4bc2-9ea1-f0e1b6e042bd\",\n                \"categoryId\": \"9ea05c17-2d15-4af8-a253-8fd977f8426f\",\n                \"name\": \"Sepatu Sneakers\",\n                \"price\": 450000,\n                \"discount\": 10,\n                \"description\": \"Sepatu sneakers nyaman untuk aktivitas sehari-hari\",\n                \"has_variant\": true,\n                \"weight\": 0.8,\n                \"avatar\": null,\n                \"createdAt\": \"2025-04-26T12:45:36.938Z\",\n                \"updatedAt\": \"2025-04-26T12:58:25.785Z\",\n                \"merchant\": {\n                    \"id\": \"ab90dc29-59d5-4bc2-9ea1-f0e1b6e042bd\",\n                    \"name\": \"Lazada\"\n                },\n                \"category\": {\n                    \"id\": \"9ea05c17-2d15-4af8-a253-8fd977f8426f\",\n                    \"name\": \"Pakaian\",\n                    \"type\": \"Baju\",\n                    \"createdAt\": \"2025-04-26T01:06:40.415Z\",\n                    \"updatedAt\": \"2025-04-26T01:06:40.415Z\"\n                },\n                \"variantProducts\": [\n                    {\n                        \"id\": \"3db18418-b0c4-4084-8df4-36c249caeca6\",\n                        \"productId\": \"d147ddb0-f7f0-4c28-bc74-789fd3ba2102\",\n                        \"colourId\": \"8c8ee0fe-1a19-48b3-b6ae-93441cb9b0a1\",\n                        \"sizeId\": \"af5f4da1-a3d9-4545-8d97-0a96f1dea549\",\n                        \"sku\": \"SS-BLACK-40\",\n                        \"stock\": 15,\n                        \"createdAt\": \"2025-04-26T12:45:36.940Z\",\n                        \"updatedAt\": \"2025-04-26T12:45:36.940Z\",\n                        \"colour\": {\n                            \"id\": \"8c8ee0fe-1a19-48b3-b6ae-93441cb9b0a1\",\n                            \"name\": \"Biru\",\n                            \"hex\": \"#0000FF\",\n                            \"createdAt\": \"2025-04-26T01:06:40.454Z\",\n                            \"updatedAt\": \"2025-04-26T01:06:40.454Z\"\n                        },\n                        \"size\": {\n                            \"id\": \"af5f4da1-a3d9-4545-8d97-0a96f1dea549\",\n                            \"name\": \"M\",\n                            \"length\": 65,\n                            \"height\": 45,\n                            \"width\": 35,\n                            \"createdAt\": \"2025-04-26T01:06:40.460Z\",\n                            \"updatedAt\": \"2025-04-26T01:06:40.460Z\"\n                        }\n                    },\n                    {\n                        \"id\": \"10d12855-b114-4c2b-86c9-0ebcd9ebc947\",\n                        \"productId\": \"d147ddb0-f7f0-4c28-bc74-789fd3ba2102\",\n                        \"colourId\": \"8c8ee0fe-1a19-48b3-b6ae-93441cb9b0a1\",\n                        \"sizeId\": \"af5f4da1-a3d9-4545-8d97-0a96f1dea549\",\n                        \"sku\": \"SS-WHITE-40\",\n                        \"stock\": 25,\n                        \"createdAt\": \"2025-04-26T12:45:36.940Z\",\n                        \"updatedAt\": \"2025-04-26T12:58:25.775Z\",\n                        \"colour\": {\n                            \"id\": \"8c8ee0fe-1a19-48b3-b6ae-93441cb9b0a1\",\n                            \"name\": \"Biru\",\n                            \"hex\": \"#0000FF\",\n                            \"createdAt\": \"2025-04-26T01:06:40.454Z\",\n                            \"updatedAt\": \"2025-04-26T01:06:40.454Z\"\n                        },\n                        \"size\": {\n                            \"id\": \"af5f4da1-a3d9-4545-8d97-0a96f1dea549\",\n                            \"name\": \"M\",\n                            \"length\": 65,\n                            \"height\": 45,\n                            \"width\": 35,\n                            \"createdAt\": \"2025-04-26T01:06:40.460Z\",\n                            \"updatedAt\": \"2025-04-26T01:06:40.460Z\"\n                        }\n                    }\n                ]\n            }\n        ],\n        \"pagination\": {\n            \"total\": 2,\n            \"page\": 1,\n            \"limit\": 10,\n            \"totalPages\": 1\n        }\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Master Data",
+			"item": [
+				{
+					"name": "Size",
+					"item": [
+						{
+							"name": "allSize",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/master-data/sizes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"master-data",
+										"sizes"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:3000/api/master-data/sizes",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"master-data",
+												"sizes"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "1427"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"593-DJKbnbeL/+EHClg3kNKoEgtOJY0\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 27 Apr 2025 03:12:14 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"error\": false,\n    \"message\": \"Successfully get all sizes!\",\n    \"sizes\": [\n        {\n            \"id\": \"ec50d811-bd3b-4ab8-b900-ee349f75af8b\",\n            \"name\": \"S\",\n            \"length\": 60,\n            \"height\": 40,\n            \"width\": 30,\n            \"createdAt\": \"2025-04-26T01:06:40.457Z\",\n            \"updatedAt\": \"2025-04-26T01:06:40.457Z\"\n        },\n        {\n            \"id\": \"af5f4da1-a3d9-4545-8d97-0a96f1dea549\",\n            \"name\": \"M\",\n            \"length\": 65,\n            \"height\": 45,\n            \"width\": 35,\n            \"createdAt\": \"2025-04-26T01:06:40.460Z\",\n            \"updatedAt\": \"2025-04-26T01:06:40.460Z\"\n        },\n        {\n            \"id\": \"1f90146d-05d3-4f09-b6dc-6153f83ac455\",\n            \"name\": \"L\",\n            \"length\": 70,\n            \"height\": 50,\n            \"width\": 40,\n            \"createdAt\": \"2025-04-26T01:06:40.460Z\",\n            \"updatedAt\": \"2025-04-26T01:06:40.460Z\"\n        },\n        {\n            \"id\": \"06616050-12a2-4716-96b7-3e483894df15\",\n            \"name\": \"XL\",\n            \"length\": 75,\n            \"height\": 55,\n            \"width\": 45,\n            \"createdAt\": \"2025-04-26T01:06:40.461Z\",\n            \"updatedAt\": \"2025-04-26T01:06:40.461Z\"\n        },\n        {\n            \"id\": \"c37d83fe-afb0-45df-a9a2-d79063373d63\",\n            \"name\": \"S\",\n            \"length\": 60,\n            \"height\": 40,\n            \"width\": 30,\n            \"createdAt\": \"2025-04-26T13:43:29.083Z\",\n            \"updatedAt\": \"2025-04-26T13:43:29.083Z\"\n        },\n        {\n            \"id\": \"2987f0c5-03ec-401d-87be-96ee3195dbab\",\n            \"name\": \"M\",\n            \"length\": 65,\n            \"height\": 45,\n            \"width\": 35,\n            \"createdAt\": \"2025-04-26T13:43:29.086Z\",\n            \"updatedAt\": \"2025-04-26T13:43:29.086Z\"\n        },\n        {\n            \"id\": \"3adc3daa-b47e-4bfa-8800-b71101387f62\",\n            \"name\": \"L\",\n            \"length\": 70,\n            \"height\": 50,\n            \"width\": 40,\n            \"createdAt\": \"2025-04-26T13:43:29.086Z\",\n            \"updatedAt\": \"2025-04-26T13:43:29.086Z\"\n        },\n        {\n            \"id\": \"28f4d88c-93d2-4eb3-8d91-a4e7401715c0\",\n            \"name\": \"XL\",\n            \"length\": 75,\n            \"height\": 55,\n            \"width\": 45,\n            \"createdAt\": \"2025-04-26T13:43:29.087Z\",\n            \"updatedAt\": \"2025-04-26T13:43:29.087Z\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "sizeById",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/master-data/size/ec50d811-bd3b-4ab8-b900-ee349f75af8b",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"master-data",
+										"size",
+										"ec50d811-bd3b-4ab8-b900-ee349f75af8b"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:3000/api/master-data/size/ec50d811-bd3b-4ab8-b900-ee349f75af8b",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"master-data",
+												"size",
+												"ec50d811-bd3b-4ab8-b900-ee349f75af8b"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "236"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"ec-M852eBxDUjQWL7LsV4fiQwoyfko\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 27 Apr 2025 03:13:00 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"error\": false,\n    \"message\": \"Successfully get spesific size!\",\n    \"size\": {\n        \"id\": \"ec50d811-bd3b-4ab8-b900-ee349f75af8b\",\n        \"name\": \"S\",\n        \"length\": 60,\n        \"height\": 40,\n        \"width\": 30,\n        \"createdAt\": \"2025-04-26T01:06:40.457Z\",\n        \"updatedAt\": \"2025-04-26T01:06:40.457Z\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "createSize",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"jumbo\",\n    \"length\": 80,\n    \"width\": 80,\n    \"height\": 80\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/master-data/size",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"master-data",
+										"size"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\": \"jumbo\",\n    \"length\": 80,\n    \"width\": 80,\n    \"height\": 80\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/master-data/size",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"master-data",
+												"size"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "234"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"ea-albmUeR6+kJrw0mJPkGMRFSHZkU\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 27 Apr 2025 03:16:32 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"error\": false,\n    \"message\": \"Successfully create size!\",\n    \"size\": {\n        \"id\": \"6e3ed584-f264-4e39-b9ca-64184d2878fd\",\n        \"name\": \"jumbo\",\n        \"length\": 80,\n        \"height\": 80,\n        \"width\": 80,\n        \"createdAt\": \"2025-04-27T03:16:32.282Z\",\n        \"updatedAt\": \"2025-04-27T03:16:32.282Z\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "updateSize",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"BIG\",\n    \"length\": 80,\n    \"width\": 80,\n    \"height\": 80\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/master-data/size/6e3ed584-f264-4e39-b9ca-64184d2878fd",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"master-data",
+										"size",
+										"6e3ed584-f264-4e39-b9ca-64184d2878fd"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\": \"BIG\",\n    \"length\": 80,\n    \"width\": 80,\n    \"height\": 80\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/master-data/size/6e3ed584-f264-4e39-b9ca-64184d2878fd",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"master-data",
+												"size",
+												"6e3ed584-f264-4e39-b9ca-64184d2878fd"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "232"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"e8-xv9UdnoAPyHjrLpjQH9Zzu3rsJc\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 27 Apr 2025 03:18:05 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"error\": false,\n    \"message\": \"Successfully update size!\",\n    \"size\": {\n        \"id\": \"6e3ed584-f264-4e39-b9ca-64184d2878fd\",\n        \"name\": \"BIG\",\n        \"length\": 80,\n        \"height\": 80,\n        \"width\": 80,\n        \"createdAt\": \"2025-04-27T03:16:32.282Z\",\n        \"updatedAt\": \"2025-04-27T03:18:05.190Z\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "deleteSize",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/master-data/size/6e3ed584-f264-4e39-b9ca-64184d2878fd",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"master-data",
+										"size",
+										"6e3ed584-f264-4e39-b9ca-64184d2878fd"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:3000/api/master-data/size/6e3ed584-f264-4e39-b9ca-64184d2878fd",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"master-data",
+												"size",
+												"6e3ed584-f264-4e39-b9ca-64184d2878fd"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "53"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"35-3eJwEideykmLI+j2VSAjYPgaslI\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 27 Apr 2025 03:18:59 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"error\": false,\n    \"message\": \"Successfully delete size!\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Colour",
+					"item": [
+						{
+							"name": "allColour",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/master-data/colours",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"master-data",
+										"colours"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:3000/api/master-data/colours",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"master-data",
+												"colours"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "3806"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"ede-TXL8VudRRc1du1KbcC5dk+7oEGs\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 27 Apr 2025 03:19:28 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"error\": false,\n    \"message\": \"Successfully get all colours!\",\n    \"colours\": [\n        {\n            \"id\": \"3a15ed2d-e9b4-41a7-b93f-4e7549753065\",\n            \"name\": \"Merah\",\n            \"hex\": \"#FF0000\",\n            \"createdAt\": \"2025-04-26T01:06:40.452Z\",\n            \"updatedAt\": \"2025-04-26T01:06:40.452Z\"\n        },\n        {\n            \"id\": \"8c8ee0fe-1a19-48b3-b6ae-93441cb9b0a1\",\n            \"name\": \"Biru\",\n            \"hex\": \"#0000FF\",\n            \"createdAt\": \"2025-04-26T01:06:40.454Z\",\n            \"updatedAt\": \"2025-04-26T01:06:40.454Z\"\n        },\n        {\n            \"id\": \"adb8c2a2-e357-4de4-9e15-63c6e5b74f3d\",\n            \"name\": \"Hitam\",\n            \"hex\": \"#000000\",\n            \"createdAt\": \"2025-04-26T01:06:40.455Z\",\n            \"updatedAt\": \"2025-04-26T01:06:40.455Z\"\n        },\n        {\n            \"id\": \"ea9a6a89-ab83-428c-bc50-f1c03ace61b8\",\n            \"name\": \"Putih\",\n            \"hex\": \"#FFFFFF\",\n            \"createdAt\": \"2025-04-26T01:06:40.455Z\",\n            \"updatedAt\": \"2025-04-26T01:06:40.455Z\"\n        },\n        {\n            \"id\": \"25950058-a69e-4745-bc9f-86aa92d2c658\",\n            \"name\": \"Merah\",\n            \"hex\": \"#FF0000\",\n            \"createdAt\": \"2025-04-26T13:43:29.071Z\",\n            \"updatedAt\": \"2025-04-26T13:43:29.071Z\"\n        },\n        {\n            \"id\": \"dfdcaa3e-1eea-4c07-b681-db807862d94c\",\n            \"name\": \"Biru\",\n            \"hex\": \"#0000FF\",\n            \"createdAt\": \"2025-04-26T13:43:29.074Z\",\n            \"updatedAt\": \"2025-04-26T13:43:29.074Z\"\n        },\n        {\n            \"id\": \"d267d3b8-30f8-4c95-801c-e70cae3ef7a9\",\n            \"name\": \"Hitam\",\n            \"hex\": \"#000000\",\n            \"createdAt\": \"2025-04-26T13:43:29.074Z\",\n            \"updatedAt\": \"2025-04-26T13:43:29.074Z\"\n        },\n        {\n            \"id\": \"a95e3592-1cda-4c7c-a3a1-080e46769e20\",\n            \"name\": \"Putih\",\n            \"hex\": \"#FFFFFF\",\n            \"createdAt\": \"2025-04-26T13:43:29.075Z\",\n            \"updatedAt\": \"2025-04-26T13:43:29.075Z\"\n        },\n        {\n            \"id\": \"627b0fc3-a761-4844-ab0b-ec86d2948e49\",\n            \"name\": \"Hijau\",\n            \"hex\": \"#00FF00\",\n            \"createdAt\": \"2025-04-26T13:43:29.075Z\",\n            \"updatedAt\": \"2025-04-26T13:43:29.075Z\"\n        },\n        {\n            \"id\": \"6f48e713-4fcd-49c7-8913-f3396b58623e\",\n            \"name\": \"Kuning\",\n            \"hex\": \"#FFFF00\",\n            \"createdAt\": \"2025-04-26T13:43:29.076Z\",\n            \"updatedAt\": \"2025-04-26T13:43:29.076Z\"\n        },\n        {\n            \"id\": \"b0ead73f-066d-4933-b280-35e0f63d38c2\",\n            \"name\": \"Ungu\",\n            \"hex\": \"#800080\",\n            \"createdAt\": \"2025-04-26T13:43:29.076Z\",\n            \"updatedAt\": \"2025-04-26T13:43:29.076Z\"\n        },\n        {\n            \"id\": \"8fe581d1-527f-4fa0-9154-748b3f116238\",\n            \"name\": \"Oranye\",\n            \"hex\": \"#FFA500\",\n            \"createdAt\": \"2025-04-26T13:43:29.077Z\",\n            \"updatedAt\": \"2025-04-26T13:43:29.077Z\"\n        },\n        {\n            \"id\": \"43d9e153-726c-4baa-9edd-ebb88016ba6e\",\n            \"name\": \"Merah Muda\",\n            \"hex\": \"#FFC0CB\",\n            \"createdAt\": \"2025-04-26T13:43:29.077Z\",\n            \"updatedAt\": \"2025-04-26T13:43:29.077Z\"\n        },\n        {\n            \"id\": \"336832a5-34e6-4f84-801f-343eb4c4d2d3\",\n            \"name\": \"Coklat\",\n            \"hex\": \"#A52A2A\",\n            \"createdAt\": \"2025-04-26T13:43:29.078Z\",\n            \"updatedAt\": \"2025-04-26T13:43:29.078Z\"\n        },\n        {\n            \"id\": \"f167be7f-ff30-4e78-a54f-590e35b8576a\",\n            \"name\": \"Abu-abu\",\n            \"hex\": \"#808080\",\n            \"createdAt\": \"2025-04-26T13:43:29.078Z\",\n            \"updatedAt\": \"2025-04-26T13:43:29.078Z\"\n        },\n        {\n            \"id\": \"6739a8fe-8004-45f0-90c5-65fa2f6dc91c\",\n            \"name\": \"Cyan\",\n            \"hex\": \"#00FFFF\",\n            \"createdAt\": \"2025-04-26T13:43:29.079Z\",\n            \"updatedAt\": \"2025-04-26T13:43:29.079Z\"\n        },\n        {\n            \"id\": \"cdcba808-81bd-4786-913e-a30f11a16a24\",\n            \"name\": \"Magenta\",\n            \"hex\": \"#FF00FF\",\n            \"createdAt\": \"2025-04-26T13:43:29.079Z\",\n            \"updatedAt\": \"2025-04-26T13:43:29.079Z\"\n        },\n        {\n            \"id\": \"dca84fb1-6131-4b09-b052-2a26d4198eb4\",\n            \"name\": \"Emas\",\n            \"hex\": \"#FFD700\",\n            \"createdAt\": \"2025-04-26T13:43:29.080Z\",\n            \"updatedAt\": \"2025-04-26T13:43:29.080Z\"\n        },\n        {\n            \"id\": \"375825a7-c607-47f9-92cf-2e7fa28571c4\",\n            \"name\": \"Perak\",\n            \"hex\": \"#C0C0C0\",\n            \"createdAt\": \"2025-04-26T13:43:29.080Z\",\n            \"updatedAt\": \"2025-04-26T13:43:29.080Z\"\n        },\n        {\n            \"id\": \"c4a11223-d018-4bac-b0dc-358dd720c18f\",\n            \"name\": \"Marun\",\n            \"hex\": \"#800000\",\n            \"createdAt\": \"2025-04-26T13:43:29.081Z\",\n            \"updatedAt\": \"2025-04-26T13:43:29.081Z\"\n        },\n        {\n            \"id\": \"730800b3-fb33-4383-b018-b70cc656357b\",\n            \"name\": \"Navy\",\n            \"hex\": \"#000080\",\n            \"createdAt\": \"2025-04-26T13:43:29.081Z\",\n            \"updatedAt\": \"2025-04-26T13:43:29.081Z\"\n        },\n        {\n            \"id\": \"ddf48e39-38a1-42e9-8254-dd5d7763d6f2\",\n            \"name\": \"Hijau Tua\",\n            \"hex\": \"#006400\",\n            \"createdAt\": \"2025-04-26T13:43:29.081Z\",\n            \"updatedAt\": \"2025-04-26T13:43:29.081Z\"\n        },\n        {\n            \"id\": \"d218ed0a-01aa-4479-a8f1-7a0f4ae7ff0f\",\n            \"name\": \"Turquoise\",\n            \"hex\": \"#40E0D0\",\n            \"createdAt\": \"2025-04-26T13:43:29.082Z\",\n            \"updatedAt\": \"2025-04-26T13:43:29.082Z\"\n        },\n        {\n            \"id\": \"e38af566-a5ec-4704-a8de-a7168e5b24bb\",\n            \"name\": \"Lavender\",\n            \"hex\": \"#E6E6FA\",\n            \"createdAt\": \"2025-04-26T13:43:29.082Z\",\n            \"updatedAt\": \"2025-04-26T13:43:29.082Z\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "colourById",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/master-data/colour/e38af566-a5ec-4704-a8de-a7168e5b24bb",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"master-data",
+										"colour",
+										"e38af566-a5ec-4704-a8de-a7168e5b24bb"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:3000/api/master-data/colour/e38af566-a5ec-4704-a8de-a7168e5b24bb",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"master-data",
+												"colour",
+												"e38af566-a5ec-4704-a8de-a7168e5b24bb"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "228"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"e4-rz3gFN54Ar6otepyG3f+JV1+ouw\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 27 Apr 2025 03:20:31 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"error\": false,\n    \"message\": \"Successfully get spesific colour!\",\n    \"colour\": {\n        \"id\": \"e38af566-a5ec-4704-a8de-a7168e5b24bb\",\n        \"name\": \"Lavender\",\n        \"hex\": \"#E6E6FA\",\n        \"createdAt\": \"2025-04-26T13:43:29.082Z\",\n        \"updatedAt\": \"2025-04-26T13:43:29.082Z\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "createColour",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Brown\",\n    \"hex\": \"#FFD700\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/master-data/colour",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"master-data",
+										"colour"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\": \"Brown\",\n    \"hex\": \"#FFD700\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/master-data/colour",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"master-data",
+												"colour"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "219"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"db-Q6pydYH7+UemJqSeU597qWFw7Xw\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 27 Apr 2025 03:21:47 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"error\": false,\n    \"message\": \"Successfully create colour!\",\n    \"colour\": {\n        \"id\": \"dbb79b5d-185a-48a8-9cad-56b8565b68fd\",\n        \"name\": \"Brown\",\n        \"hex\": \"#FFD700\",\n        \"createdAt\": \"2025-04-27T03:21:47.838Z\",\n        \"updatedAt\": \"2025-04-27T03:21:47.838Z\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "updateColour",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"lavenders\",\n    \"hex\": \"#A52A2A\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/master-data/colour/e38af566-a5ec-4704-a8de-a7168e5b24bb",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"master-data",
+										"colour",
+										"e38af566-a5ec-4704-a8de-a7168e5b24bb"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\": \"lavenders\",\n    \"hex\": \"#A52A2A\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/master-data/colour/e38af566-a5ec-4704-a8de-a7168e5b24bb",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"master-data",
+												"colour",
+												"e38af566-a5ec-4704-a8de-a7168e5b24bb"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "223"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"df-ZiCDkHkuTJz6qrI11LzSzFq0VVw\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 27 Apr 2025 03:27:54 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"error\": false,\n    \"message\": \"Successfully update colour!\",\n    \"colour\": {\n        \"id\": \"e38af566-a5ec-4704-a8de-a7168e5b24bb\",\n        \"name\": \"lavenders\",\n        \"hex\": \"#A52A2A\",\n        \"createdAt\": \"2025-04-26T13:43:29.082Z\",\n        \"updatedAt\": \"2025-04-27T03:27:54.239Z\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "deleteSize",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/master-data/colour/e38af566-a5ec-4704-a8de-a7168e5b24bb",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"master-data",
+										"colour",
+										"e38af566-a5ec-4704-a8de-a7168e5b24bb"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:3000/api/master-data/colour/e38af566-a5ec-4704-a8de-a7168e5b24bb",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"master-data",
+												"colour",
+												"e38af566-a5ec-4704-a8de-a7168e5b24bb"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "55"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"37-cLolBRoqY2gKyAQXYLxZHiZGu6E\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 27 Apr 2025 03:28:20 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"error\": false,\n    \"message\": \"Successfully delete colour!\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Category",
+					"item": [
+						{
+							"name": "allCategory",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/master-data/categories",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"master-data",
+										"categories"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:3000/api/master-data/categories",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"master-data",
+												"categories"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "4976"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"1370-zhe1sShvX/iSOVcPQQkPSIWZ/A0\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 27 Apr 2025 03:29:05 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"error\": false,\n    \"message\": \"Successfully get all categories!\",\n    \"categories\": [\n        {\n            \"id\": \"9ea05c17-2d15-4af8-a253-8fd977f8426f\",\n            \"name\": \"Pakaian\",\n            \"type\": \"Baju\",\n            \"createdAt\": \"2025-04-26T01:06:40.415Z\",\n            \"updatedAt\": \"2025-04-26T01:06:40.415Z\"\n        },\n        {\n            \"id\": \"5773cc99-81c7-450e-a61d-241f22202735\",\n            \"name\": \"Pakaian\",\n            \"type\": \"Celana\",\n            \"createdAt\": \"2025-04-26T01:06:40.450Z\",\n            \"updatedAt\": \"2025-04-26T01:06:40.450Z\"\n        },\n        {\n            \"id\": \"bc016cec-3b6a-4033-95b5-d8fb6cc6749f\",\n            \"name\": \"Elektronik\",\n            \"type\": \"Gadget\",\n            \"createdAt\": \"2025-04-26T01:06:40.451Z\",\n            \"updatedAt\": \"2025-04-26T01:06:40.451Z\"\n        },\n        {\n            \"id\": \"3acde290-962a-4a76-8a98-656952e71814\",\n            \"name\": \"Olahraga\",\n            \"type\": \"Sepak Bola\",\n            \"createdAt\": \"2025-04-26T01:06:40.452Z\",\n            \"updatedAt\": \"2025-04-26T01:06:40.452Z\"\n        },\n        {\n            \"id\": \"87a4d44d-a4d6-4dee-9abf-0db8aef8cbd4\",\n            \"name\": \"Pakaian\",\n            \"type\": \"Baju\",\n            \"createdAt\": \"2025-04-26T13:43:29.033Z\",\n            \"updatedAt\": \"2025-04-26T13:43:29.033Z\"\n        },\n        {\n            \"id\": \"ff3dc92a-e167-401d-bb12-495de191ef35\",\n            \"name\": \"Pakaian\",\n            \"type\": \"Celana\",\n            \"createdAt\": \"2025-04-26T13:43:29.056Z\",\n            \"updatedAt\": \"2025-04-26T13:43:29.056Z\"\n        },\n        {\n            \"id\": \"b011894b-4bb7-47be-a555-8474888387f6\",\n            \"name\": \"Pakaian\",\n            \"type\": \"Jaket\",\n            \"createdAt\": \"2025-04-26T13:43:29.057Z\",\n            \"updatedAt\": \"2025-04-26T13:43:29.057Z\"\n        },\n        {\n            \"id\": \"fb07b4c7-ffd5-4aa1-b72e-0471df982d4d\",\n            \"name\": \"Pakaian\",\n            \"type\": \"Kemeja\",\n            \"createdAt\": \"2025-04-26T13:43:29.057Z\",\n            \"updatedAt\": \"2025-04-26T13:43:29.057Z\"\n        },\n        {\n            \"id\": \"a6e2cb82-38f5-496e-852a-4d306c51ba5a\",\n            \"name\": \"Pakaian\",\n            \"type\": \"Kaos\",\n            \"createdAt\": \"2025-04-26T13:43:29.058Z\",\n            \"updatedAt\": \"2025-04-26T13:43:29.058Z\"\n        },\n        {\n            \"id\": \"3fcab89d-aa3f-45e5-93c8-e54204a650da\",\n            \"name\": \"Pakaian\",\n            \"type\": \"Dress\",\n            \"createdAt\": \"2025-04-26T13:43:29.059Z\",\n            \"updatedAt\": \"2025-04-26T13:43:29.059Z\"\n        },\n        {\n            \"id\": \"b7b8443a-3b42-48d6-8b4e-53cf939d370e\",\n            \"name\": \"Pakaian\",\n            \"type\": \"Rok\",\n            \"createdAt\": \"2025-04-26T13:43:29.059Z\",\n            \"updatedAt\": \"2025-04-26T13:43:29.059Z\"\n        },\n        {\n            \"id\": \"9a90f8aa-704b-4f7f-a4c3-2d6553fde710\",\n            \"name\": \"Pakaian\",\n            \"type\": \"Sweater\",\n            \"createdAt\": \"2025-04-26T13:43:29.060Z\",\n            \"updatedAt\": \"2025-04-26T13:43:29.060Z\"\n        },\n        {\n            \"id\": \"4b95ce2b-e813-4a51-b4da-787e95d8a94c\",\n            \"name\": \"Pakaian\",\n            \"type\": \"Hoodie\",\n            \"createdAt\": \"2025-04-26T13:43:29.061Z\",\n            \"updatedAt\": \"2025-04-26T13:43:29.061Z\"\n        },\n        {\n            \"id\": \"e8e9a673-ebb8-449c-bf3f-73a5bf223dac\",\n            \"name\": \"Pakaian\",\n            \"type\": \"Jas\",\n            \"createdAt\": \"2025-04-26T13:43:29.061Z\",\n            \"updatedAt\": \"2025-04-26T13:43:29.061Z\"\n        },\n        {\n            \"id\": \"30605787-c073-411c-a148-7e7ae8ebaa39\",\n            \"name\": \"Elektronik\",\n            \"type\": \"Gadget\",\n            \"createdAt\": \"2025-04-26T13:43:29.062Z\",\n            \"updatedAt\": \"2025-04-26T13:43:29.062Z\"\n        },\n        {\n            \"id\": \"2d389bfb-8f0c-453a-89d2-ca854e7a49fe\",\n            \"name\": \"Elektronik\",\n            \"type\": \"Laptop\",\n            \"createdAt\": \"2025-04-26T13:43:29.062Z\",\n            \"updatedAt\": \"2025-04-26T13:43:29.062Z\"\n        },\n        {\n            \"id\": \"5ac26a66-1ee7-481f-906c-fb4f08c6a4b2\",\n            \"name\": \"Elektronik\",\n            \"type\": \"Komputer\",\n            \"createdAt\": \"2025-04-26T13:43:29.063Z\",\n            \"updatedAt\": \"2025-04-26T13:43:29.063Z\"\n        },\n        {\n            \"id\": \"b6c36450-e779-4723-85fd-5f09a0f65553\",\n            \"name\": \"Elektronik\",\n            \"type\": \"TV\",\n            \"createdAt\": \"2025-04-26T13:43:29.063Z\",\n            \"updatedAt\": \"2025-04-26T13:43:29.063Z\"\n        },\n        {\n            \"id\": \"3f8dcefd-6f46-41b3-93f8-698d49a4ffb7\",\n            \"name\": \"Elektronik\",\n            \"type\": \"Speaker\",\n            \"createdAt\": \"2025-04-26T13:43:29.064Z\",\n            \"updatedAt\": \"2025-04-26T13:43:29.064Z\"\n        },\n        {\n            \"id\": \"f629ac17-557c-4e92-86f8-5ece26b04cb9\",\n            \"name\": \"Elektronik\",\n            \"type\": \"Headphone\",\n            \"createdAt\": \"2025-04-26T13:43:29.064Z\",\n            \"updatedAt\": \"2025-04-26T13:43:29.064Z\"\n        },\n        {\n            \"id\": \"726573a8-582e-4f50-a095-f6a4847ac5f9\",\n            \"name\": \"Elektronik\",\n            \"type\": \"Kamera\",\n            \"createdAt\": \"2025-04-26T13:43:29.065Z\",\n            \"updatedAt\": \"2025-04-26T13:43:29.065Z\"\n        },\n        {\n            \"id\": \"9b59d30f-88e2-4595-b455-d7c51fc1784a\",\n            \"name\": \"Elektronik\",\n            \"type\": \"Drone\",\n            \"createdAt\": \"2025-04-26T13:43:29.065Z\",\n            \"updatedAt\": \"2025-04-26T13:43:29.065Z\"\n        },\n        {\n            \"id\": \"1a8b2bed-9db1-4bfa-88bf-9493b8c1642c\",\n            \"name\": \"Olahraga\",\n            \"type\": \"Sepak Bola\",\n            \"createdAt\": \"2025-04-26T13:43:29.066Z\",\n            \"updatedAt\": \"2025-04-26T13:43:29.066Z\"\n        },\n        {\n            \"id\": \"1038a204-df9f-454b-8270-f9b18969fd34\",\n            \"name\": \"Olahraga\",\n            \"type\": \"Basket\",\n            \"createdAt\": \"2025-04-26T13:43:29.066Z\",\n            \"updatedAt\": \"2025-04-26T13:43:29.066Z\"\n        },\n        {\n            \"id\": \"dd7dc994-3487-4248-8a65-2823fd455141\",\n            \"name\": \"Olahraga\",\n            \"type\": \"Tenis\",\n            \"createdAt\": \"2025-04-26T13:43:29.067Z\",\n            \"updatedAt\": \"2025-04-26T13:43:29.067Z\"\n        },\n        {\n            \"id\": \"39d7f0ee-afa1-4139-982d-1852f4f8c540\",\n            \"name\": \"Olahraga\",\n            \"type\": \"Renang\",\n            \"createdAt\": \"2025-04-26T13:43:29.068Z\",\n            \"updatedAt\": \"2025-04-26T13:43:29.068Z\"\n        },\n        {\n            \"id\": \"3d532ffd-e168-40db-9ea5-472818fe75cf\",\n            \"name\": \"Olahraga\",\n            \"type\": \"Yoga\",\n            \"createdAt\": \"2025-04-26T13:43:29.069Z\",\n            \"updatedAt\": \"2025-04-26T13:43:29.069Z\"\n        },\n        {\n            \"id\": \"4c5a3641-ca93-445d-9c5c-74e0ddf1c207\",\n            \"name\": \"Olahraga\",\n            \"type\": \"Bulu Tangkis\",\n            \"createdAt\": \"2025-04-26T13:43:29.069Z\",\n            \"updatedAt\": \"2025-04-26T13:43:29.069Z\"\n        },\n        {\n            \"id\": \"c5c33941-bd5e-4b6b-9ba6-49856229a355\",\n            \"name\": \"Otomotif\",\n            \"type\": \"Mobil\",\n            \"createdAt\": \"2025-04-26T13:43:29.070Z\",\n            \"updatedAt\": \"2025-04-26T13:43:29.070Z\"\n        },\n        {\n            \"id\": \"4bc6ddd5-3e98-49af-ada0-38cc106c557f\",\n            \"name\": \"Otomotif\",\n            \"type\": \"Motor\",\n            \"createdAt\": \"2025-04-26T13:43:29.070Z\",\n            \"updatedAt\": \"2025-04-26T13:43:29.070Z\"\n        },\n        {\n            \"id\": \"de7bc4ea-7e73-4ec9-bc94-61df3a934547\",\n            \"name\": \"Otomotif\",\n            \"type\": \"Sepeda\",\n            \"createdAt\": \"2025-04-26T13:43:29.071Z\",\n            \"updatedAt\": \"2025-04-26T13:43:29.071Z\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "categoryById",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/master-data/category/de7bc4ea-7e73-4ec9-bc94-61df3a934547",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"master-data",
+										"category",
+										"de7bc4ea-7e73-4ec9-bc94-61df3a934547"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:3000/api/master-data/category/de7bc4ea-7e73-4ec9-bc94-61df3a934547",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"master-data",
+												"category",
+												"de7bc4ea-7e73-4ec9-bc94-61df3a934547"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "232"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"e8-5SElpsFE2/W3w58b5TOF8OHD0To\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 27 Apr 2025 03:29:56 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"error\": false,\n    \"message\": \"Successfully get spesific category!\",\n    \"category\": {\n        \"id\": \"de7bc4ea-7e73-4ec9-bc94-61df3a934547\",\n        \"name\": \"Otomotif\",\n        \"type\": \"Sepeda\",\n        \"createdAt\": \"2025-04-26T13:43:29.071Z\",\n        \"updatedAt\": \"2025-04-26T13:43:29.071Z\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "createCategory",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/master-data/category",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"master-data",
+										"category"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\": \"Atlet\",\n    \"type\": \"Run\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/master-data/category",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"master-data",
+												"category"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "220"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"dc-/wNn76Vq2Q7tEggksmnGnh4qvZs\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 27 Apr 2025 03:31:04 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"error\": false,\n    \"message\": \"Successfully create category!\",\n    \"category\": {\n        \"id\": \"c901e5b5-05bf-40cc-9a1a-297c8193c874\",\n        \"name\": \"Atlet\",\n        \"type\": \"Run\",\n        \"createdAt\": \"2025-04-27T03:31:04.184Z\",\n        \"updatedAt\": \"2025-04-27T03:31:04.184Z\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "updateCategory",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Moon\",\n    \"type\": \"Scard\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/master-data/category/de7bc4ea-7e73-4ec9-bc94-61df3a934547",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"master-data",
+										"category",
+										"de7bc4ea-7e73-4ec9-bc94-61df3a934547"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\": \"Moon\",\n    \"type\": \"Scard\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:3000/api/master-data/category/de7bc4ea-7e73-4ec9-bc94-61df3a934547",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"master-data",
+												"category",
+												"de7bc4ea-7e73-4ec9-bc94-61df3a934547"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "221"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"dd-RH6BYd9aBv6w8O+Dd/45TCyZx0A\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 27 Apr 2025 03:33:05 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"error\": false,\n    \"message\": \"Successfully update category!\",\n    \"category\": {\n        \"id\": \"de7bc4ea-7e73-4ec9-bc94-61df3a934547\",\n        \"name\": \"Moon\",\n        \"type\": \"Scard\",\n        \"createdAt\": \"2025-04-26T13:43:29.071Z\",\n        \"updatedAt\": \"2025-04-27T03:33:05.190Z\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "deleteCategory",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{TOKEN}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/master-data/category/de7bc4ea-7e73-4ec9-bc94-61df3a934547",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"master-data",
+										"category",
+										"de7bc4ea-7e73-4ec9-bc94-61df3a934547"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:3000/api/master-data/category/de7bc4ea-7e73-4ec9-bc94-61df3a934547",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "3000",
+											"path": [
+												"api",
+												"master-data",
+												"category",
+												"de7bc4ea-7e73-4ec9-bc94-61df3a934547"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "57"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"39-jNFW0OJOWFE7025fRfIYOGpP9nw\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 27 Apr 2025 03:33:46 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"error\": false,\n    \"message\": \"Successfully delete category!\"\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}
