@@ -92,3 +92,7 @@ Untuk development, Anda disarankan menggunakan `npm run dev` supaya perubahan ot
 
 Happy coding! ✨
 
+### Rancangan Database
+![SDA-ECommerce-db-design drawio](https://github.com/user-attachments/assets/5532646b-0a21-411d-b117-ecb0c9c23aa5)
+
+
