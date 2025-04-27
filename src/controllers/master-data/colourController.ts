@@ -138,11 +138,12 @@ export const deleteColourCtrl = async (
             })
             return
         }
-        
+
         await deleteColour(id)
         res.status(201).json({
             error: false,
             message: "Successfully delete colour!",
+            colour_id: id
         })
         return
     } catch (e: any) {

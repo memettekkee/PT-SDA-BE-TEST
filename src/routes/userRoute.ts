@@ -3,6 +3,7 @@ import upload from '../utils/multer';
 import verifyToken from '../middlewares/auth';
 
 import {
+    forgotPasswordCtrl,
     getAllUserCtrl,
     getUserById,
     loginCtrl, 
@@ -14,6 +15,9 @@ const router = express.Router();
 
 router.post('/register', upload.user.none(), registerCtrl)
 router.post('/login', upload.user.none(), loginCtrl)
+
+// User forgot password
+router.post('/forgot-password', upload.user.none(), forgotPasswordCtrl)
 
 // PRIVATE ENDPOINT
 router.get('/users', verifyToken, getAllUserCtrl)

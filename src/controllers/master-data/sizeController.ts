@@ -146,11 +146,12 @@ export const deleteSizeCtrl = async (
             })
             return
         }
-        
+
         await deleteSize(id)
         res.status(201).json({
             error: false,
             message: "Successfully delete size!",
+            size_id: id
         })
         return
     } catch (e: any) {

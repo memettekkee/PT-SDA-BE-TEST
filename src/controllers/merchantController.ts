@@ -131,7 +131,8 @@ export const updateMerchantCtrl = async (
             email,
             address,
             phone,
-            type
+            type,
+            status
         } = req.body
         const { id } = req.params
         const userId = req.user?.id
@@ -184,6 +185,7 @@ export const updateMerchantCtrl = async (
             address,
             phone,
             avatar,
+            status,
             type: type?.trim() ? type : 'Merchant'
         }
 
@@ -232,7 +234,8 @@ export const deleteMerchantCtrl = async (
         await deleteMerchant(id)
         res.status(201).json({
             error: false,
-            message: "Merchant successfully deleted !"
+            message: "Merchant successfully deleted !",
+            merchant_id: id
         })
         return
     } catch (e: any) {

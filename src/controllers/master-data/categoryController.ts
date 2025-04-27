@@ -149,6 +149,7 @@ export const deleteCategoryCtrl = async (
         res.status(201).json({
             error: false,
             message: "Successfully delete category!",
+            category_id: id
         })
         return
     } catch (e: any) {

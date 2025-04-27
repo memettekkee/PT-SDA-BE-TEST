@@ -1,3 +1,6 @@
+import crypto from 'crypto';
+import bcrypt from 'bcrypt';
+
 import prisma from '../database/connection'
 import type { User, UpdateUser } from '../utils/interface'
 
@@ -7,6 +10,34 @@ export const registerUser = async (userData: User) => {
     })
     return user
 }
+
+export const resetPassword = async (email: string) => {
+    const user = await prisma.user.findFirst({
+      where: { email }
+    });
+  
+    if (!user) {
+      return null;
+    }
+  
+    // New password
+    const newPassword = crypto.randomBytes(4).toString('hex'); 
+    const hashedPassword = await bcrypt.hash(newPassword, 10);
+
+    await prisma.user.update({
+      where: { id: user.id },
+      data: {
+        password: hashedPassword
+      }
+    });
+  
+    return {
+      success: true,
+      username: user.username,
+      email: user.email,
+      newPassword: newPassword
+    };
+  };
 
 export const existingUser = async (username: string, email: string) => {
     const user = await prisma.user.findFirst({

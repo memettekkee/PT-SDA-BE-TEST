@@ -8,7 +8,8 @@ import {
     userById,
     allUsers, 
     userLogin,
-    updateUser
+    updateUser,
+    resetPassword
 } from '../models/userModel'
 
 import { 
@@ -103,6 +104,51 @@ export const registerCtrl = async (
         return
     }
 }
+
+export const forgotPasswordCtrl = async (
+    req: express.Request, 
+    res: express.Response
+) => {
+    try {
+        const { email } = req.body;
+
+        // Validate email
+        if (!email) {
+        res.status(400).json({
+            error: true,
+            message: 'Email is required'
+        });
+        return;
+        }
+
+        const result = await resetPassword(email);
+
+        if (!result) {
+        res.status(404).json({
+            error: true,
+            message: 'Email not found'
+        });
+        return;
+        }
+
+        res.status(200).json({
+        error: false,
+        message: 'Password has been reset',
+        data: {
+            username: result.username,
+            email: result.email,
+            newPassword: result.newPassword
+        }
+        });
+        return;
+    } catch (e: any) {
+      res.status(500).json({
+        error: true,
+        message: e.message
+      });
+      return;
+    }
+  };
 
 export const loginCtrl = async (
     req: express.Request,
