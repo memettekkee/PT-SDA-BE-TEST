@@ -11,10 +11,10 @@ import {
 
 const router = express.Router();
 
-router.post('/product', verifyToken, upload.none(), createProductCtrl)
+router.post('/product', verifyToken, upload.product.single('avatar'), createProductCtrl)
 router.get('/product/:id', verifyToken, getProductByIdCtrl)
 router.get('/products', verifyToken, getAllProductsCtrl)
 router.delete('/product/:id', verifyToken, deleteProductCtrl)
-router.put('/product/:id', verifyToken, upload.none(), updateProductCtrl)
+router.put('/product/:id', verifyToken, upload.product.single('avatar'), updateProductCtrl)
 
 export default router

@@ -47,8 +47,13 @@ export const createProductCtrl = async (
             categoryId,
             variants,
             has_variant,
-            avatar
         } = req.body;
+
+        let avatar = 'default-product.png' 
+        
+        if (req.file) {
+            avatar = req.file.filename;
+        }
         
         if (!name || !price) {
             res.status(422).json({
@@ -239,8 +244,13 @@ export const updateProductCtrl = async (
             categoryId,
             has_variant,
             variants,
-            avatar
         } = req.body;
+
+        let avatar = 'default-product.png' 
+        
+        if (req.file) {
+            avatar = req.file.filename;
+        }
 
         const checkProduct = await productById(id);
         if (!checkProduct) {

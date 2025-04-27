@@ -44,10 +44,15 @@ export const createMerchantCtrl = async (
             email,
             address,
             phone,
-            avatar,
             type
         } = req.body
         const userId = req.user?.id;
+
+        let avatar = 'default-merch.png' 
+        
+        if (req.file) {
+            avatar = req.file.filename;
+        }
 
         if (phone) {
             if (!isPhoneNumberValid(phone)) {
@@ -126,11 +131,16 @@ export const updateMerchantCtrl = async (
             email,
             address,
             phone,
-            avatar,
             type
         } = req.body
         const { id } = req.params
         const userId = req.user?.id
+
+        let avatar = 'default-merch.png' 
+        
+        if (req.file) {
+            avatar = req.file.filename;
+        }
 
         if (phone) {
             if (!isPhoneNumberValid(phone)) {

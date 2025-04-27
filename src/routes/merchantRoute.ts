@@ -13,9 +13,9 @@ import {
 const router = express.Router();
 
 router.get('/merchants', verifyToken, getAllMerchantsCtrl)
-router.post('/merchant', verifyToken, upload.none(), createMerchantCtrl)
+router.post('/merchant', verifyToken, upload.merchant.single('avatar'), createMerchantCtrl)
 router.get('/merchant/:id', verifyToken, getMerchantByIdCtrl)
-router.put('/merchant/:id', verifyToken, upload.none(), updateMerchantCtrl)
+router.put('/merchant/:id', verifyToken, upload.merchant.single('avatar'), updateMerchantCtrl)
 router.delete('/merchant/:id', verifyToken, deleteMerchantCtrl)
 
 export default router

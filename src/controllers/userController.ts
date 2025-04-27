@@ -31,8 +31,15 @@ export const registerCtrl = async (
             birth,
             address,
             phone,
-            avatar
         } = req.body
+
+        if (!username || !fullname || !email || !password || !phone) {
+            res.status(422).json({
+                error: true,
+                message: "Please provide all required fields !"
+            })
+            return
+        }
 
         if (!isPasswordValid(password)) {
             res.status(422).json({
@@ -77,7 +84,7 @@ export const registerCtrl = async (
             birth,
             address,
             phone,
-            avatar
+            avatar: 'default-user.png'
         }
 
         await registerUser(userData)
@@ -210,7 +217,6 @@ export const updateUserCtrl = async (
             birth,
             address,
             phone,
-            avatar
         } = req.body
         const userId = req.user?.id;
     
@@ -222,6 +228,12 @@ export const updateUserCtrl = async (
                 message: "Can't update different user !"
             })
             return;
+        }
+
+        let avatar = 'default-user.png' 
+        
+        if (req.file) {
+            avatar = req.file.filename;
         }
 
         const updateForm = {
